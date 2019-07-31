@@ -15,6 +15,11 @@ struct ListNode {
 
 class Solution {
 public:
+	Solution()
+	{
+
+	}
+
 	//136.Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 	// a linear runtime complexity + without using extra memory?
 	// 1. sort
@@ -150,6 +155,35 @@ public:
 			if (top3.insert(num).second && top3.size() > 3)
 				top3.erase(top3.begin());
 		return top3.size() == 3 ? *top3.begin() : *top3.rbegin();
+	}
+
+	// 22. Generate Parentheses
+	vector<string> generateParenthesis(int n) {
+
+	}
+
+	// 26. Remove Duplicates from Sorted Array
+	//sorted array nums
+	int removeDuplicates(vector<int>& nums) 
+	{
+		vector<int> rel;
+		if (nums.size() == 1 || nums.size() == 0)
+			return nums.size();
+
+		rel.push_back(nums[0]);
+		for (size_t i = 1; i < nums.size(); i++)
+		{
+			if (nums[i] == rel.back())
+			{
+				continue;
+			}
+			else
+			{
+				rel.push_back(nums[i]);
+			}
+		}
+		nums = rel;
+		return nums.size();
 	}
 };
 
