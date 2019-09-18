@@ -30,13 +30,16 @@
     <ClInclude Include="PartitionList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MaximumSubarray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LIS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinChange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSubarray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

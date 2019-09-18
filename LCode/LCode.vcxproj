@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CoinChange.h" />
     <ClInclude Include="DP.h" />
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
