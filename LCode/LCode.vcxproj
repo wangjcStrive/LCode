@@ -151,7 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DP.h" />
+    <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
+    <ClInclude Include="LIS.h" />
+    <ClInclude Include="MaximumSubarray.h" />
+    <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="solutions.h" />
   </ItemGroup>

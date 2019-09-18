@@ -21,6 +21,24 @@
     <ClInclude Include="solutions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LetterCombinationsOfaPhoneNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GenerateParenthesis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PartitionList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaximumSubarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LIS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

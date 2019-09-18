@@ -2,14 +2,20 @@
 #include <iostream>
 #include <vector>
 #include <set>
-
+#include <string>
 
 using namespace std;
 
-struct ListNode {
+class ListNode {
+public:
 	int val;
 	ListNode* next;
 	ListNode(int x) : val(x), next(NULL) {}
+	static void printListNode(ListNode* head)
+	{
+		for (ListNode* cur = head; cur != nullptr; cur = cur->next)
+			cout << cur->val << endl;
+	}
 };
 
 
