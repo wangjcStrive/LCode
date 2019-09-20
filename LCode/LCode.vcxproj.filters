@@ -30,9 +30,6 @@
     <ClInclude Include="PartitionList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DP.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LIS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +40,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ClimbingStairs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WordBreak.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GenerateParentheses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
