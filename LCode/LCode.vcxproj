@@ -156,6 +156,7 @@
     <ClInclude Include="CoinChange.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />
+    <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LIS.h" />
     <ClInclude Include="MaximumSubarray.h" />
