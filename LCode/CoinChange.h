@@ -1,6 +1,13 @@
 #pragma once
 #include "solutions.h"
 #include <map>
+
+
+/*
+	322. Coin Change
+*/
+
+
 class CoinChange {
 public:
 	int coinChange(vector<int>& coins, int amount) {
