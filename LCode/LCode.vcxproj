@@ -164,6 +164,7 @@
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RotateImage.h" />
     <ClInclude Include="solutions.h" />
     <ClInclude Include="WordBreak.h" />
   </ItemGroup>
