@@ -54,6 +54,12 @@
     <ClInclude Include="HouseRobber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MinStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListCycleII.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

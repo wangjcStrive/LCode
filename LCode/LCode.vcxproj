@@ -158,8 +158,10 @@
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
+    <ClInclude Include="LinkedListCycleII.h" />
     <ClInclude Include="LIS.h" />
     <ClInclude Include="MaximumSubarray.h" />
+    <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="solutions.h" />
