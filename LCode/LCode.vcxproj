@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AllSortSolutions.h" />
     <ClInclude Include="BestTimetoBuyandSellStock.h" />
     <ClInclude Include="ClimbingStairs.h" />
     <ClInclude Include="CoinChange.h" />
