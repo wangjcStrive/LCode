@@ -11,6 +11,7 @@
 #include "RotateImage.h"
 #include "SortList.h"
 #include "AllSortSolutions.h"
+#include "IntersectionofTwoLinkedLists.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -21,7 +22,8 @@ using namespace std;
 //#define LinkedListCycleII_142
 //#define Rotate_Image_48
 //#define SortList_148
-#define Sort_All
+//#define Sort_All
+#define Intersection_of_Two_LinkedLists_160
 
 void printVector(vector<int> input)
 {
@@ -30,10 +32,49 @@ void printVector(vector<int> input)
 	cout << endl;
 }
 
+void printLinkList(ListNode* head)
+{
+	while (head != NULL)
+	{
+		cout << head->val << " ";
+		head = head->next;
+	}
+	cout << endl;
+}
+
 
 int main()
 {
 	vector<int> arr = { 6,7,5,2,1,9 };
+
+#ifdef Intersection_of_Two_LinkedLists_160
+	IntersectionofTwoLinkedLists ins;
+	ListNode* intersectionTemp;
+	ListNode* headA = new ListNode(4);
+	headA->next = new ListNode(1);
+	ListNode* temp = headA->next;
+	temp->next = new ListNode(8);
+	temp = temp->next;
+	intersectionTemp = temp;
+	temp->next = new ListNode(4);
+	temp = temp->next;
+	temp->next = new ListNode(5);
+	temp->next->next = NULL;
+	printLinkList(headA);
+	ListNode* headB = new ListNode(5);
+	headB->next = new ListNode(0);
+	temp = headB->next;
+	temp->next = new ListNode(1);
+	temp = temp->next;
+	temp->next = intersectionTemp;
+	printLinkList(headB);
+
+	ListNode* result = ins.getIntersectionNode(headA, headB);
+	cout << result->val << endl;
+	//ins.getIntersectionNode();
+#endif // Intersection_of_Two_LinkedLists_160
+
+
 	
 #ifdef Sort_All
 	Sort ins;

@@ -158,6 +158,7 @@
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="HouseRobber.h" />
+    <ClInclude Include="IntersectionofTwoLinkedLists.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LinkedListCycleII.h" />
     <ClInclude Include="LIS.h" />
