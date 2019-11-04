@@ -12,6 +12,7 @@
 #include "SortList.h"
 #include "AllSortSolutions.h"
 #include "IntersectionofTwoLinkedLists.h"
+#include "ReverseLinkedList.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -23,7 +24,8 @@ using namespace std;
 //#define Rotate_Image_48
 //#define SortList_148
 //#define Sort_All
-#define Intersection_of_Two_LinkedLists_160
+//#define Intersection_of_Two_LinkedLists_160
+#define Reverse_LinkList_206
 
 void printVector(vector<int> input)
 {
@@ -42,10 +44,33 @@ void printLinkList(ListNode* head)
 	cout << endl;
 }
 
+ListNode* createListNode(int len)
+{
+	ListNode* head = (ListNode*)malloc(sizeof(ListNode));
+	head->val = 0;
+	ListNode* tempHead = head;
+	for (int i = 1; i < len; i++)
+	{
+		tempHead->next = (ListNode*)malloc(sizeof(ListNode));
+		tempHead->next->val = i;
+		tempHead = tempHead->next;
+	}
+	//别忘记最后一个节点next设为NULL
+	tempHead->next = NULL;
+	return head;
+}
 
 int main()
 {
 	vector<int> arr = { 6,7,5,2,1,9 };
+#ifdef Reverse_LinkList_206
+	ListNode* root = createListNode(5);
+	printLinkList(root);
+	ReverseLinkedList ins;
+	ListNode *newRoot = ins.reverseList(root);
+	printLinkList(newRoot);
+#endif // Reverse_LinkList_206
+
 
 #ifdef Intersection_of_Two_LinkedLists_160
 	IntersectionofTwoLinkedLists ins;

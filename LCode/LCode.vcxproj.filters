@@ -72,6 +72,9 @@
     <ClInclude Include="IntersectionofTwoLinkedLists.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ReverseLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
