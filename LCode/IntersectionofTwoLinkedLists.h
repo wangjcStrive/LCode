@@ -12,7 +12,6 @@ class IntersectionofTwoLinkedLists {
 public:
 	ListNode* getIntersectionNode(ListNode* headA, ListNode* headB)
 	{
-		ListNode* tempHead;
 		ListNode* longList, * shortList;
 		int lenA = calculateLinkListLength(headA);
 		int lenB = calculateLinkListLength(headB);

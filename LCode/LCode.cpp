@@ -67,7 +67,8 @@ int main()
 	ListNode* root = createListNode(5);
 	printLinkList(root);
 	ReverseLinkedList ins;
-	ListNode *newRoot = ins.reverseList(root);
+	//ListNode *newRoot = ins.reverseList(root);
+	ListNode* newRoot = ins.reverseList_recursive(root);
 	printLinkList(newRoot);
 #endif // Reverse_LinkList_206
 

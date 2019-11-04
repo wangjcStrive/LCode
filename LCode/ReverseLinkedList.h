@@ -29,4 +29,29 @@ public:
 
 		return slow;
 	}
+
+	ListNode* reverseList_recursive(ListNode* head)
+	{
+				
+		if (head == NULL || head->next == NULL)
+			return head;
+		ListNode* oldHead = head->next;
+		ListNode* newHead = head;
+		newHead->next = NULL;
+		reverseRecursive(oldHead, &newHead);
+		return newHead;
+	}
+
+	void reverseRecursive(ListNode* oldHead, ListNode** newHead)
+	{
+		if (oldHead == NULL)
+			return;
+
+		ListNode* tempHead = oldHead->next;
+		oldHead->next = *newHead;
+		*newHead = oldHead;
+		oldHead = tempHead;
+		reverseRecursive(oldHead, newHead);
+		
+	}
 };
