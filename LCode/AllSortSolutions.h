@@ -3,6 +3,7 @@
 
 /*
 	https://github.com/MisterBooo/Article gif to show all sort algorithem
+	要考虑到有相同值的情况
 */
 
 class Sort
@@ -15,6 +16,7 @@ public:
 	void SelectionSort(vector<int>& array);
 	void insertSort(vector<int>& array);
 	vector<int> mergeSort(vector<int> input);
+	void shellSort(vector<int> input);
 private:
 
 };
@@ -34,6 +36,9 @@ void Sort::swap(int& a, int& b)
 	b = x;
 }
 
+/*
+	冒泡
+*/
 void Sort::bubbleSort(vector<int>& input)
 {
 	int i, j;
@@ -53,7 +58,8 @@ void Sort::bubbleSort(vector<int>& input)
 }
 
 /*
-	O(n^2)
+	选择排序
+	O(n^2) 不稳定排序
 	从剩的里面挑出最小的.
 */
 inline void Sort::SelectionSort(vector<int>& array)
@@ -80,7 +86,9 @@ inline void Sort::SelectionSort(vector<int>& array)
 }
 
 /*
-	
+	插入排序
+	O(n^2)
+	stable
 */
 inline void Sort::insertSort(vector<int>& array)
 {
@@ -105,3 +113,10 @@ inline void Sort::insertSort(vector<int>& array)
 }
 
 
+/*
+	插入排序的一种更高效的改进版本。非稳定排序算法
+*/
+void shellSort(vector<int> input)
+{
+
+}

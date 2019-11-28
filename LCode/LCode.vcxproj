@@ -155,6 +155,7 @@
     <ClInclude Include="BestTimetoBuyandSellStock.h" />
     <ClInclude Include="ClimbingStairs.h" />
     <ClInclude Include="CoinChange.h" />
+    <ClInclude Include="CourseSchedule.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="HouseRobber.h" />
