@@ -25,12 +25,13 @@ using namespace std;
 //#define SortList_148
 //#define Sort_All
 //#define Intersection_of_Two_LinkedLists_160
-#define Reverse_LinkList_206
+//#define Reverse_LinkList_206
+#define Shell_Sort
 
 void printVector(vector<int> input)
 {
 	for (auto x : input)
-		cout << x << endl;
+		cout << x << " ";
 	cout << endl;
 }
 
@@ -63,6 +64,14 @@ ListNode* createListNode(int len)
 int main()
 {
 	vector<int> arr = { 6,7,5,2,1,9 };
+#ifdef Shell_Sort
+	Sort ins;
+	ins.shellSort(arr, arr.size());
+	printVector(arr);
+#endif // Shell_Sort
+
+
+
 #ifdef Reverse_LinkList_206
 	ListNode* root = createListNode(5);
 	printLinkList(root);

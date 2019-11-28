@@ -15,9 +15,9 @@ public:
 	void bubbleSort(vector<int>& input);
 	void SelectionSort(vector<int>& array);
 	void insertSort(vector<int>& array);
-	void shellSort(vector<int>& array);
+	void shellSort(vector<int>& array, int n);
+	void shellSort_myOwn(vector<int>& array);
 	vector<int> mergeSort(vector<int> input);
-	void shellSort(vector<int> input);
 private:
 
 };
@@ -117,9 +117,47 @@ inline void Sort::insertSort(vector<int>& array)
 /*
 	希尔排序。插入排序的升级. https://blog.csdn.net/qq_39207948/article/details/80006224
 	对较大规模，相对无序的数据也很高效
+	首先它把较大的数据集合分割成若干个小组（逻辑上分组），然后对每一个小组分别进行插入排序，此时，插入排序所作用的数据量比较小（每一个小组），插入的效率比较高
+	非稳定排序，虽然插入排序是稳定的，但是有的时候是跳跃性插入的，可能会破坏稳定性
 */
-inline void Sort::shellSort(vector<int>& array)
+inline void Sort::shellSort_myOwn(vector<int>& array)
 {
+	int len = array.size();
+	int gap = len / 2;
+	int i, j, k;
+	while (gap>0)
+	{
+		for (i = 0; i < gap; i++) //number of sub goup is gap
+		{
+			vector<int> subArray;
+			for (j=0, k=i+j*gap; k < len; j++, k=i+j*gap) //create subArray to use inset sort
+			{
+				subArray.push_back(array[k]);
+			}
+			insertSort(subArray);
+			for (j = 0, k=i+j*gap; k < len; j++, k = i + j * gap) // copy sorted sub array to original array
+			{
+				array[k] = subArray[j];
+			}
+			
+		}
+		gap /= 2;
+	}
 }
 
-
+inline void Sort::shellSort(vector<int> &array, int n)
+{
+	for (int gap = n / 2; gap > 0; gap /= 2)
+	{
+		for (int i = gap; i < n; i += 1)
+		{
+			int temp = array[i];
+			int j;
+			for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+			{
+				array[j] = array[j - gap];
+			}
+			array[j] = temp;
+		}
+	}
+}
