@@ -15,6 +15,7 @@ public:
 	void bubbleSort(vector<int>& input);
 	void SelectionSort(vector<int>& array);
 	void insertSort(vector<int>& array);
+	void shellSort(vector<int>& array);
 	vector<int> mergeSort(vector<int> input);
 	void shellSort(vector<int> input);
 private:
@@ -89,6 +90,7 @@ inline void Sort::SelectionSort(vector<int>& array)
 	插入排序
 	O(n^2)
 	stable
+	插入排序。小规模数据或者基本有序时比较高效。
 */
 inline void Sort::insertSort(vector<int>& array)
 {
@@ -112,11 +114,12 @@ inline void Sort::insertSort(vector<int>& array)
 	}
 }
 
-
 /*
-	插入排序的一种更高效的改进版本。非稳定排序算法
+	希尔排序。插入排序的升级. https://blog.csdn.net/qq_39207948/article/details/80006224
+	对较大规模，相对无序的数据也很高效
 */
-void shellSort(vector<int> input)
+inline void Sort::shellSort(vector<int>& array)
 {
-
 }
+
+
