@@ -147,17 +147,25 @@ inline void Sort::shellSort_myOwn(vector<int>& array)
 
 inline void Sort::shellSort(vector<int> &array, int n)
 {
-	for (int gap = n / 2; gap > 0; gap /= 2)
-	{
-		for (int i = gap; i < n; i += 1)
-		{
-			int temp = array[i];
-			int j;
-			for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+	int i, j, k, gap;
+	for (gap = n / 2; gap > 0; gap = gap / 2)
+	{ //步长
+		for (i = 0; i < gap; i++)
+		{  //直接插入排序的次数；也就是在每个分组中需要进行几次直接插入排序；
+			//开始进行插入排序，每次加gap的步长；
+			for (j = i + gap; j < n; j = j + gap)
 			{
-				array[j] = array[j - gap];
+				if (array[j] < array[j - gap])
+				{
+					//保存后面的值；
+					int temp = array[j];
+					for (k = j - gap; k >= 0 && array[k] > temp; k = k - gap) {
+						//先把前面的数往后移；
+						array[k + gap] = array[k];
+					}
+					array[k + gap] = temp;
+				}
 			}
-			array[j] = temp;
 		}
 	}
 }

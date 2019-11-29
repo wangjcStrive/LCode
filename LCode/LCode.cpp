@@ -63,7 +63,8 @@ ListNode* createListNode(int len)
 
 int main()
 {
-	vector<int> arr = { 6,7,5,2,1,9 };
+	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
+	vector<int> arr = { 7,6,5,4,3,2,1 };
 #ifdef Shell_Sort
 	Sort ins;
 	ins.shellSort(arr, arr.size());
