@@ -17,17 +17,35 @@ public:
 	void insertSort(vector<int>& array);
 	void shellSort(vector<int>& array, int n);
 	void shellSort_myOwn(vector<int>& array);
-	vector<int> mergeSort(vector<int> input);
+	void mergeSort(vector<int>& input);
+	void mergeSortRecursive(vector<int> input, int start, int end);
+	void mergeSortMerge(vector<int> input, int start, int end, vector<int> mergeResult);
 private:
 
 };
 
 /*
-	O( n * log(n) )
+	O( n * log(n) ). 稳定排序
+	分治. 递归
 */
-inline vector<int> Sort::mergeSort(vector<int> input)
+inline void Sort::mergeSort(vector<int>& input)
 {
-	return vector<int>();
+	int i = 0;
+	int j = input.size() / 2;
+	mergeSortRecursive(input, i, j);
+}
+
+inline void Sort::mergeSortRecursive(vector<int> input, int start, int end)
+{
+	if (end - start <= 1)
+	{
+		if(input[start]>input[end])
+			swap(input[start], input[end]);
+		return;
+	}
+	mergeSortRecursive(input, start, end / 2);
+	mergeSortRecursive(input, end / 2 + 1, start);
+	mergeSortMerge(input, start, end);
 }
 
 void Sort::swap(int& a, int& b)
@@ -145,6 +163,11 @@ inline void Sort::shellSort_myOwn(vector<int>& array)
 	}
 }
 
+
+/*
+	网上的算法还没有搞懂
+*/
+// TODO. not understand blow algo
 inline void Sort::shellSort(vector<int> &array, int n)
 {
 	int i, j, k, gap;

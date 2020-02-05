@@ -90,4 +90,9 @@
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\Desktop\ph.apk">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
