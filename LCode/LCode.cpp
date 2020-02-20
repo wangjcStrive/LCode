@@ -13,6 +13,7 @@
 #include "AllSortSolutions.h"
 #include "IntersectionofTwoLinkedLists.h"
 #include "ReverseLinkedList.h"
+#include "DailyTemperatures_739.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -26,7 +27,8 @@ using namespace std;
 //#define Sort_All
 //#define Intersection_of_Two_LinkedLists_160
 //#define Reverse_LinkList_206
-#define Shell_Sort
+//#define Shell_Sort
+#define Daily_Temperatures_739
 
 void printVector(vector<int> input)
 {
@@ -64,14 +66,25 @@ ListNode* createListNode(int len)
 int main()
 {
 	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
-	vector<int> arr = { 7,6,5,4,3,2,1 };
+	vector<int> arr = { 73, 74, 75, 71, 69, 72, 76, 73 };
+
+
+#ifdef Daily_Temperatures_739
+	DailyTemperatures ins;
+	vector<int> result;
+	result = ins.dailyTemperatures(arr);
+	printVector(result);
+
+#endif // Daily_Temperatures_739
+
+
+
+
 #ifdef Shell_Sort
 	Sort ins;
 	ins.shellSort(arr, arr.size());
 	printVector(arr);
 #endif // Shell_Sort
-
-
 
 #ifdef Reverse_LinkList_206
 	ListNode* root = createListNode(5);

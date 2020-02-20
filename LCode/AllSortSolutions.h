@@ -45,7 +45,7 @@ inline void Sort::mergeSortRecursive(vector<int> input, int start, int end)
 	}
 	mergeSortRecursive(input, start, end / 2);
 	mergeSortRecursive(input, end / 2 + 1, start);
-	mergeSortMerge(input, start, end);
+	//mergeSortMerge(input, start, end);
 }
 
 void Sort::swap(int& a, int& b)
