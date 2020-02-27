@@ -14,6 +14,8 @@
 #include "IntersectionofTwoLinkedLists.h"
 #include "ReverseLinkedList.h"
 #include "DailyTemperatures_739.h"
+#include "DecodeString_394.h"
+
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -28,7 +30,8 @@ using namespace std;
 //#define Intersection_of_Two_LinkedLists_160
 //#define Reverse_LinkList_206
 //#define Shell_Sort
-#define Daily_Temperatures_739
+//#define Daily_Temperatures_739
+#define Decode_String_394
 
 void printVector(vector<int> input)
 {
@@ -67,6 +70,16 @@ int main()
 {
 	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
 	vector<int> arr = { 73, 74, 75, 71, 69, 72, 76, 73 };
+
+#ifdef Decode_String_394
+	DecodeString ins;
+	string result = ins.decodeString("3[a2[c]]");
+	cout << result << endl;
+	result = ins.decodeString("3[a]2[bc]");
+	cout << result << endl;
+	result = ins.decodeString("100[leetcode]");
+	cout << result << endl;
+#endif // Decode_String_394
 
 
 #ifdef Daily_Temperatures_739
