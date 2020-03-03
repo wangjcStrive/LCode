@@ -87,6 +87,9 @@
     <ClInclude Include="DecodeString_394.h">
       <Filter>Header Files\Stack</Filter>
     </ClInclude>
+    <ClInclude Include="ImplementQueueUsingStacks_232.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
