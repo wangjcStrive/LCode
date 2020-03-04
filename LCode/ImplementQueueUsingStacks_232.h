@@ -19,8 +19,10 @@ public:
 
 	/** Removes the element from in front of queue and returns that element. */
 	int pop() {
+		int result = m_s2.top();
 		m_s2.pop();
 		updateStack1();
+		return result;
 	}
 
 	/** Get the front element. */
@@ -30,12 +32,12 @@ public:
 
 	/** Returns whether the queue is empty. */
 	bool empty() {
-
+		return (m_s1.empty());
 	}
 private:
 	stack<int> m_s1;
 	stack<int> m_s2;
-	void updateStack2(int x)
+	void updateStack2()
 	{
 		while (!m_s2.empty())
 			m_s2.pop();

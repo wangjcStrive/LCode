@@ -25,11 +25,32 @@ class DecodeString {
 	};
 public:
 	/*
+		递归，其实跟用stack差不多，递归也是在栈里
+	*/
+	string decodeString(string s)
+	{
+		for (size_t i = 0; i < s.length(); i++)
+		{
+			
+		}
+	}
+	
+	string func(string s, int i, int step, int count)
+	{
+		if (s[i] == '[')
+			func(s, i + 1, step++, count);
+		else if (s[i]>='0' && s[i]<='9')
+				count = count * 10 + (s[i] - '0');
+	}
+
+
+
+	/*
 	 * input =  3[a]2[bc] => 3 * {a + 2 *(bc) }
 	 * 遇到'['时push到stack
 	 * 遇到']'时用上面公式pop
 	 */
-	string decodeString(string s)
+	string decodeString_stack(string s)
 	{
 		stack<pair<string, int>> myStack;
 		string str = "";

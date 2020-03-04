@@ -15,6 +15,7 @@
 #include "ReverseLinkedList.h"
 #include "DailyTemperatures_739.h"
 #include "DecodeString_394.h"
+#include "ImplementQueueUsingStacks_232.h"
 
 using namespace std;
 
@@ -31,7 +32,8 @@ using namespace std;
 //#define Reverse_LinkList_206
 //#define Shell_Sort
 //#define Daily_Temperatures_739
-#define Decode_String_394
+//#define Decode_String_394
+#define ImplementQueueUsingStack_232
 
 void printVector(vector<int> input)
 {
@@ -61,7 +63,7 @@ ListNode* createListNode(int len)
 		tempHead->next->val = i;
 		tempHead = tempHead->next;
 	}
-	//±ðÍü¼Ç×îºóÒ»¸ö½ÚµãnextÉèÎªNULL
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Úµï¿½nextï¿½ï¿½ÎªNULL
 	tempHead->next = NULL;
 	return head;
 }
@@ -70,6 +72,18 @@ int main()
 {
 	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
 	vector<int> arr = { 73, 74, 75, 71, 69, 72, 76, 73 };
+#ifdef ImplementQueueUsingStack_232
+	MyQueue queue;
+	queue.push(1);
+	queue.push(2);
+	cout << queue.peek() << endl;  // returns 1
+	cout << queue.pop() << endl;   // returns 1
+	bool result = queue.empty() ? true : false;
+	if (result)
+		cout << "yes" << endl;
+	else
+		cout << "No" << endl;
+#endif
 
 #ifdef Decode_String_394
 	DecodeString ins;
@@ -137,7 +151,7 @@ int main()
 #endif // Intersection_of_Two_LinkedLists_160
 
 
-	
+
 #ifdef Sort_All
 	Sort ins;
 	printVector(arr);
@@ -152,7 +166,7 @@ int main()
 	SortList ins;
 	ListNode* tempLast = head;
 	ListNode* cycle = nullptr;
-	for (int i = 5; i >0 ; i--)
+	for (int i = 5; i > 0; i--)
 	{
 		tempLast->next = new ListNode(i);
 		tempLast = tempLast->next;
@@ -202,8 +216,8 @@ int main()
 	ListNode* head = new ListNode(0);
 	LinkedListCycleII ins;
 	ListNode* tempLast = head;
-	ListNode* cycle=nullptr;
-	for ( int i = 1; i < 5; i++)
+	ListNode* cycle = nullptr;
+	for (int i = 1; i < 5; i++)
 	{
 		tempLast->next = new ListNode(i);
 		tempLast = tempLast->next;
@@ -244,7 +258,7 @@ int main()
 
 #ifdef DYNAMIC_PROGRAM
 	DP dp;
-	vector<int> coinList = {1, 2, 5};
+	vector<int> coinList = { 1, 2, 5 };
 	vector<int> resultList;
 	cout << dp.coinsChange(coinList, 33) << endl;
 #endif // DYNAMIC_PROGRAM
@@ -264,20 +278,20 @@ int main()
 	//int input[] = { 2, 3, 4, 1, 2, 6, 7 };
 	ListNode* head = new ListNode(input[0]);
 	ListNode* cur = head;
-	for (size_t i = 1; i < sizeof(input)/sizeof(int); i++)
+	for (size_t i = 1; i < sizeof(input) / sizeof(int); i++)
 	{
 		cur->next = new ListNode(input[i]);
 		cur = cur->next;
 	}
 	cur->next = nullptr;
-	
+
 	ListNode::printListNode(head);
 	cout << endl;
 
 	PartitionList ins;
 	ListNode* result = ins.partition(head, 0);
 	ListNode::printListNode(result);
-	
+
 #endif // PARTITION_LIST_86
 
 
