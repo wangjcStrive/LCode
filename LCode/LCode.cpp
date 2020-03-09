@@ -16,6 +16,7 @@
 #include "DailyTemperatures_739.h"
 #include "DecodeString_394.h"
 #include "ImplementQueueUsingStacks_232.h"
+#include "TrappingRainWater_42.h"
 
 using namespace std;
 
@@ -33,7 +34,8 @@ using namespace std;
 //#define Shell_Sort
 //#define Daily_Temperatures_739
 //#define Decode_String_394
-#define ImplementQueueUsingStack_232
+//#define ImplementQueueUsingStack_232
+#define TrappingRainWater_42
 
 void printVector(vector<int> input)
 {
@@ -63,7 +65,6 @@ ListNode* createListNode(int len)
 		tempHead->next->val = i;
 		tempHead = tempHead->next;
 	}
-	//���������һ���ڵ�next��ΪNULL
 	tempHead->next = NULL;
 	return head;
 }
@@ -71,7 +72,14 @@ ListNode* createListNode(int len)
 int main()
 {
 	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
-	vector<int> arr = { 73, 74, 75, 71, 69, 72, 76, 73 };
+	//vector<int> arr = { 0,1,0,2,1,0,1,3,2,1,2,1 };
+	//vector<int> arr = { 2, 1, 3, 4, 2, 0, 0, 2 };
+	vector<int> arr;
+#ifdef TrappingRainWater_42
+	TrappingRainWater ins;
+	cout << ins.trap1(arr) << endl;
+#endif // TrappingRainWater_42
+
 #ifdef ImplementQueueUsingStack_232
 	MyQueue queue;
 	queue.push(1);
