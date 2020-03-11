@@ -73,11 +73,11 @@ int main()
 {
 	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
 	//vector<int> arr = { 0,1,0,2,1,0,1,3,2,1,2,1 };
-	//vector<int> arr = { 2, 1, 3, 4, 2, 0, 0, 2 };
-	vector<int> arr;
+	vector<int> arr = { 2, 1, 3, 4, 2, 0, 0, 2 };
+	//vector<int> arr;
 #ifdef TrappingRainWater_42
 	TrappingRainWater ins;
-	cout << ins.trap1(arr) << endl;
+	cout << ins.trap2_DP(arr) << endl;
 #endif // TrappingRainWater_42
 
 #ifdef ImplementQueueUsingStack_232
