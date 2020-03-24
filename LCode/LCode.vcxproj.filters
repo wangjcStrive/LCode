@@ -93,6 +93,9 @@
     <ClInclude Include="TrappingRainWater_42.h">
       <Filter>Header Files\Stack</Filter>
     </ClInclude>
+    <ClInclude Include="SimplifyPath_71.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

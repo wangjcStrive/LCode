@@ -17,7 +17,7 @@
 #include "DecodeString_394.h"
 #include "ImplementQueueUsingStacks_232.h"
 #include "TrappingRainWater_42.h"
-
+#include "SimplifyPath_71.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -35,7 +35,8 @@ using namespace std;
 //#define Daily_Temperatures_739
 //#define Decode_String_394
 //#define ImplementQueueUsingStack_232
-#define TrappingRainWater_42
+//#define TrappingRainWater_42
+#define SimplifyPath_71
 
 void printVector(vector<int> input)
 {
@@ -71,14 +72,41 @@ ListNode* createListNode(int len)
 
 int main()
 {
-	//vector<int> arr = { 6,7,5,2,1,9,3,8,4,10 };
-	//vector<int> arr = { 0,1,0,2,1,0,1,3,2,1,2,1 };
 	vector<int> arr = { 2, 1, 3, 4, 2, 0, 0, 2 };
-	//vector<int> arr;
+
+#ifdef SimplifyPath_71
+	vector<string> input_SP =
+	{
+		//"/home/",
+		//"a/a/a",
+		//"/a/.aa.../",
+		"/..",
+		"/a//b////c/d//././/..",
+		"/home/.../abc/xyz",
+		"/a/.",
+		"/../",
+		"/home/",
+		"/../",
+		"/home//foo/",
+		"/a/./b/../../c/",
+		"/a/../../b/../c//.//",
+		"/a//b////c/d//././/.." 
+	};
+	SimplifyPath ins;
+	for (size_t i = 0; i < input_SP.size(); i++)
+	{
+		cout << ins.simplifyPath(input_SP[i]) << endl;
+	}
+#endif // SimplifyPath_71
+
+
+
 #ifdef TrappingRainWater_42
 	TrappingRainWater ins;
 	cout << ins.trap2_DP(arr) << endl;
 #endif // TrappingRainWater_42
+
+
 
 #ifdef ImplementQueueUsingStack_232
 	MyQueue queue;
