@@ -4,6 +4,8 @@
 #include <set>
 #include <string>
 #include <stack>
+#include <algorithm>
+#include <limits>
 
 using namespace std;
 

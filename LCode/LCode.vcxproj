@@ -163,6 +163,7 @@
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="ImplementQueueUsingStacks_232.h" />
     <ClInclude Include="IntersectionofTwoLinkedLists.h" />
+    <ClInclude Include="LargestRectangleInHistogram_84.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LinkedListCycleII.h" />
     <ClInclude Include="LIS.h" />
@@ -176,6 +177,7 @@
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
+    <ClInclude Include="ValidParentheses_20.h" />
     <ClInclude Include="WordBreak.h" />
   </ItemGroup>
   <ItemGroup>

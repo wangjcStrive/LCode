@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <time.h>
+#include <Windows.h>
 #include "solutions.h"
 #include "LetterCombinationsOfaPhoneNumber.h"
 #include "PartitionList.h"
@@ -18,6 +20,8 @@
 #include "ImplementQueueUsingStacks_232.h"
 #include "TrappingRainWater_42.h"
 #include "SimplifyPath_71.h"
+#include "LargestRectangleInHistogram_84.h"
+#include "ValidParentheses_20.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -36,7 +40,9 @@ using namespace std;
 //#define Decode_String_394
 //#define ImplementQueueUsingStack_232
 //#define TrappingRainWater_42
-#define SimplifyPath_71
+//#define SimplifyPath_71
+//#define LargestRectangleInHistogram_84
+#define ValidParentheses_20
 
 void printVector(vector<int> input)
 {
@@ -72,7 +78,26 @@ ListNode* createListNode(int len)
 
 int main()
 {
-	vector<int> arr = { 2, 1, 3, 4, 2, 0, 0, 2 };
+	clock_t startTime = clock();
+#ifdef ValidParentheses_20
+	ValidParentheses ins;
+	string input0 = "";
+	string input1 = "()[]{}";
+	string input2 = "(]";
+	string input3 = "([)]";
+	cout << input1 + "	" << ins.isValid(input1) << endl;
+	cout << input2 + "	" << ins.isValid(input2) << endl;
+	cout << input3 + "	" << ins.isValid(input3) << endl;
+#endif // ValidParentheses_20
+
+
+#ifdef LargestRectangleInHistogram_84
+	vector<int> input = {2, 1, 5, 6, 2, 3};
+	LargestRectangleInHistogram ins;
+	//cout << ins.LargestRectangleinHistogram(input) << endl;
+	cout << ins.LargestRectangleinHistogram_DivideConquer(input) << endl;
+#endif // LargestRec
+
 
 #ifdef SimplifyPath_71
 	vector<string> input_SP =
@@ -329,6 +354,7 @@ int main()
 	ListNode::printListNode(result);
 
 #endif // PARTITION_LIST_86
-
+	clock_t endTime = clock();
+	cout << "app use " << fixed << (double)(endTime - startTime) / CLOCKS_PER_SEC *1000 << "ms" << endl;
 
 }

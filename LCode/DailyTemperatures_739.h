@@ -1,6 +1,7 @@
 #include "solutions.h"
 #include <stack>
 /*
+	739. Daily Temperatures
 	temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
 	output = [1, 1, 4, 2, 1, 1, 0, 0].
 */
@@ -18,6 +19,7 @@ class DailyTemperatures {
 public:
 	vector<int> dailyTemperatures(vector<int>& T)
 	{
+		// pair<index, value>
 		stack <pair<unsigned int, int>> decreaseStack;
 		vector<int> result(T.size());
 		for (size_t i = 0; i < T.size(); i++)

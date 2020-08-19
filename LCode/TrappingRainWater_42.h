@@ -20,24 +20,24 @@ public:
 		int result = 0;
 		if (height.size() == 0)
 			return result;
-		for (size_t i = 1; i < height.size() - 1; i++)
+		for (size_t current = 1; current < height.size() - 1; current++)
 		{
 			int maxLeft = 0;
 			int maxRight = 0;
 			int left;
-			for (left = i-1; left >= 0; left--)
+			for (left = current-1; left >= 0; left--)
 			{
 				if (left >= 0 && height[left] > maxLeft)
 					maxLeft = height[left];
 			}
-			for (size_t right = i + 1; right < height.size(); right++)
+			for (size_t right = current + 1; right < height.size(); right++)
 			{
 				if (right < height.size() && height[right] > maxRight)
 					maxRight = height[right];
 			}
-			if (height[i] <= maxLeft && height[i] <= maxRight)
+			if (height[current] <= maxLeft && height[current] <= maxRight)
 			{
-				result += min(maxLeft, maxRight) - height[i];
+				result += min(maxLeft, maxRight) - height[current];
 			}
 		}
 
@@ -60,9 +60,9 @@ public:
 		
 		vector<int> maxLeft(height.size(), 0);
 		maxLeft[0]=0;
-		for (int i = 1; i < height.size(); i++)
+		for (int current = 1; current < height.size(); current++)
 		{
-			maxLeft[i] = max(maxLeft[i - 1], height[i - 1]);
+			maxLeft[current] = max(maxLeft[current - 1], height[current - 1]);
 		}
 
 		vector<int> maxRight(height.size(), 0);
@@ -72,16 +72,83 @@ public:
 			maxRight[j] = max(maxRight[j + 1], height[j + 1]);
 		}
 
-		for (int i = 1; i < height.size(); i++)
+		for (int current = 1; current < height.size(); current++)
 		{
-			int minValue = min(maxLeft[i], maxRight[i]);
-			if (minValue > height[i])
-				result += minValue - height[i];
+			int minValue = min(maxLeft[current], maxRight[current]);
+			if (minValue > height[current])
+				result += minValue - height[current];
 		}
 		return result;
 	}
 
 	/*
 		双指针
+		动态规划中，我们常常可以对空间复杂度进行进一步的优化。
+		例如这道题中，可以看到，max_left [ current ] 和 max_right [ current ] 数组中的元素我们其实只用一次，然后就再也不会用到了。所以我们可以不用数组，只用一个元素就行了.
+		遍历一遍，用	
 	*/
+	int trap(vector<int>& height)
+	{
+		int sum = 0;
+		int max_left = 0;
+		int max_right = 0;
+		int left = 1;
+		int right = height.size() - 2;
+		for (int current = 1; current < height.size() - 1; current++)
+		{
+
+			if (height[left - 1] < height[right + 1]) {
+				max_left = max(max_left, height[left - 1]);
+				int min = max_left;
+				if (min > height[left]) {
+					sum = sum + (min - height[left]);
+				}
+				left++;
+
+			}
+			else {
+				max_right = max(max_right, height[right + 1]);
+				int min = max_right;
+				if (min > height[right]) {
+					sum = sum + (min - height[right]);
+				}
+				right--;
+			}
+		}
+		return sum;
+	}
+
+
+	/*
+		stack.
+		height[current] compare with stack.top()
+		这算法最后部分计算sum那里没有看懂...
+	*/
+	int trap_st(vector<int>& height)
+	{
+		int sum = 0;
+		int len = height.size();
+		if (len == 0)
+			return sum;
+		//stack will save index.
+		stack<int> st;
+		st.push(height[0]);
+		int stTopIndex;
+		for (int current = 1; current < height.size(); current++)
+		{
+			while (!st.empty() && height[current]>st.top())
+			{
+				stTopIndex = st.top();
+				st.pop();
+				if (st.empty())
+					continue;
+				int distance = current - st.top() - 1;
+				int minHight = min(height[current], height[st.top()]);
+				sum += distance * (minHight - height[stTopIndex]);
+			}
+			st.push(current);
+		}
+
+		return  0;
+	}
 };
