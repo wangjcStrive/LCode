@@ -167,6 +167,7 @@
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LinkedListCycleII.h" />
     <ClInclude Include="LIS.h" />
+    <ClInclude Include="MaximalRectangle_85.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />

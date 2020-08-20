@@ -37,12 +37,12 @@ using namespace std;
 //#define Reverse_LinkList_206
 //#define Shell_Sort
 //#define Daily_Temperatures_739
-//#define Decode_String_394
+#define Decode_String_394
 //#define ImplementQueueUsingStack_232
 //#define TrappingRainWater_42
 //#define SimplifyPath_71
 //#define LargestRectangleInHistogram_84
-#define ValidParentheses_20
+//#define ValidParentheses_20
 
 void printVector(vector<int> input)
 {
@@ -148,12 +148,8 @@ int main()
 
 #ifdef Decode_String_394
 	DecodeString ins;
-	string result = ins.decodeString("3[a2[c]]");
-	cout << result << endl;
-	result = ins.decodeString("3[a]2[bc]");
-	cout << result << endl;
-	result = ins.decodeString("100[leetcode]");
-	cout << result << endl;
+	cout << "xxxxx" << endl;
+	cout << ins.decodeString("2[a11[c]]") << endl;
 #endif // Decode_String_394
 
 

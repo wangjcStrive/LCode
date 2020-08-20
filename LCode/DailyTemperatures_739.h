@@ -17,6 +17,10 @@
 */
 class DailyTemperatures {
 public:
+	/*
+		Runtime: 136 ms, faster than 50.36% of C++ online submissions for Daily Temperatures.
+		Memory Usage: 38.9 MB, less than 9.49% of C++ online submissions for Daily Temperatures.
+	*/
 	vector<int> dailyTemperatures(vector<int>& T)
 	{
 		// pair<index, value>

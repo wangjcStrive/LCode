@@ -102,6 +102,9 @@
     <ClInclude Include="ValidParentheses_20.h">
       <Filter>Header Files\Stack</Filter>
     </ClInclude>
+    <ClInclude Include="MaximalRectangle_85.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
