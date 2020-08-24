@@ -16,6 +16,9 @@
     <Filter Include="Header Files\Stack">
       <UniqueIdentifier>{53728145-8363-4cda-960d-ff68ecf283a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DP">
+      <UniqueIdentifier>{637a2bb2-fa17-46df-84be-0c189d31388e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -104,6 +107,9 @@
     </ClInclude>
     <ClInclude Include="MaximalRectangle_85.h">
       <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinChange_322.h">
+      <Filter>Header Files\DP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
