@@ -23,13 +23,14 @@
 #include "LargestRectangleInHistogram_84.h"
 #include "ValidParentheses_20.h"
 #include "CoinChange_322.h"
+#include "LongestIncreasingSubsequence_300.h"
 #include <chrono>
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
 //#define PARTITION_LIST_86
 //#define DYNAMIC_PROGRAM
-//#define LIS_300
+#define LIS_300
 //#define ThreeSum_15
 //#define LinkedListCycleII_142
 //#define Rotate_Image_48
@@ -45,7 +46,7 @@ using namespace std;
 //#define SimplifyPath_71
 //#define LargestRectangleInHistogram_84
 //#define ValidParentheses_20
-#define CoinChange_322
+//#define CoinChange_322
 
 void printVector(vector<int> input)
 {
@@ -311,9 +312,23 @@ int main()
 
 
 #ifdef LIS_300
-		LIS lis;
 		vector<int> input = { 10,9,2,5,3,7,101,18 };
-		std::cout << lis.lengthOfLIS(input) << endl;
+		vector<int> input1 = { 1, 2, 3,4,5,6 };
+		vector<int> input2 = { 6,5,4,3,2,1 };
+		/*
+			//old version:
+			LIS lis;
+			std::cout << lis.lengthOfLIS(input) << endl;
+		*/
+		LongestIncreasingSubsequence_300 ins;
+		//cout << ins.lengthOfLIS(input) << endl;
+		//cout << ins.lengthOfLIS(input1) << endl;		
+		//cout << ins.lengthOfLIS(input2) << endl;
+
+		cout << ins.lengthOfLIS_vectorMinMax(input) << endl;		
+		cout << ins.lengthOfLIS_vectorMinMax(input1) << endl;
+		cout << ins.lengthOfLIS_vectorMinMax(input2) << endl;
+
 #endif // LIS_300
 
 

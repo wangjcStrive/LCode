@@ -111,6 +111,12 @@
     <ClInclude Include="CoinChange_322.h">
       <Filter>Header Files\DP</Filter>
     </ClInclude>
+    <ClInclude Include="LongestIncreasingSubsequence_300.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="IncreasingSubsequences_491.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
