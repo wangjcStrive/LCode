@@ -107,8 +107,8 @@ public:
         计算DP[i]时的算法复杂度为O(N). 重新设计状态定义使得整个DP为一个排序列表，计算每个DP[i]时，通过二分法遍历
         [0, i]区间，复杂度降为O(logN)
     */
-    int lengthOfLIS_vectorMinMax_faster(vector<int>& nums)
+    int lengthOfLIS_vectorMinMax_todo(vector<int>& nums)
     {
-
+        return 0;
     }
 };

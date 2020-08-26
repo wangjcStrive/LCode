@@ -114,7 +114,7 @@
     <ClInclude Include="LongestIncreasingSubsequence_300.h">
       <Filter>Header Files\DP</Filter>
     </ClInclude>
-    <ClInclude Include="IncreasingSubsequences_491.h">
+    <ClInclude Include="LongestPalindromicSubstring_5.h">
       <Filter>Header Files\DP</Filter>
     </ClInclude>
   </ItemGroup>

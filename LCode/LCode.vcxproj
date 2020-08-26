@@ -163,13 +163,13 @@
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="ImplementQueueUsingStacks_232.h" />
-    <ClInclude Include="IncreasingSubsequences_491.h" />
     <ClInclude Include="IntersectionofTwoLinkedLists.h" />
     <ClInclude Include="LargestRectangleInHistogram_84.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LinkedListCycleII.h" />
     <ClInclude Include="LIS.h" />
     <ClInclude Include="LongestIncreasingSubsequence_300.h" />
+    <ClInclude Include="LongestPalindromicSubstring_5.h" />
     <ClInclude Include="MaximalRectangle_85.h" />
     <ClInclude Include="MaximumSubarray.h" />
     <ClInclude Include="MinStack.h" />

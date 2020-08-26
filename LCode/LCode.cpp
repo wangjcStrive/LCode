@@ -4,6 +4,7 @@
 #include <string>
 #include <time.h>
 #include <Windows.h>
+#include <chrono>
 #include "solutions.h"
 #include "LetterCombinationsOfaPhoneNumber.h"
 #include "PartitionList.h"
@@ -24,13 +25,13 @@
 #include "ValidParentheses_20.h"
 #include "CoinChange_322.h"
 #include "LongestIncreasingSubsequence_300.h"
-#include <chrono>
+#include "LongestPalindromicSubstring_5.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
 //#define PARTITION_LIST_86
 //#define DYNAMIC_PROGRAM
-#define LIS_300
+//#define LIS_300
 //#define ThreeSum_15
 //#define LinkedListCycleII_142
 //#define Rotate_Image_48
@@ -47,6 +48,7 @@ using namespace std;
 //#define LargestRectangleInHistogram_84
 //#define ValidParentheses_20
 //#define CoinChange_322
+#define LongestPalindromicSubstring
 
 void printVector(vector<int> input)
 {
@@ -85,6 +87,18 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+
+#ifdef LongestPalindromicSubstring
+		LongestPalindromicSubstring_5 ins;
+		cout << ins.longestPalindrome_DP("abcba") << endl;
+		cout << ins.longestPalindrome_DP("abba") << endl;
+		cout << ins.longestPalindrome_DP("babad") << endl;
+		cout << ins.longestPalindrome_DP("aaaaa") << endl;
+		cout << ins.longestPalindrome_DP("aaaa") << endl;
+		cout << ins.longestPalindrome_DP("bb") << endl;
+		cout << ins.longestPalindrome_DP("ac") << endl;
+#endif // LongestPalindromicSubstring
+
 #ifdef ValidParentheses_20
 		ValidParentheses ins;
 		string input0 = "";
