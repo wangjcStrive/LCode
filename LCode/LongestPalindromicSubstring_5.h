@@ -121,37 +121,4 @@ public:
 		//}
 		return s.substr(left, maxLen);
 	}
-
-
-
-	string tobeDelete(string s)
-	{
-		int len = s.length();
-		if (len == 0)
-			return "";
-		if (len == 1)
-			return s;
-
-		string resultStr = "";
-		int maxLengh = 0;
-		for (int i = 1; i < len; i++)
-		{
-			int left = i - 1;
-			int right = i + 1;
-			while (left >= 0 && s[left] == s[i])
-				left--;
-			while (left >= 0 && right <= len && s[left] == s[right])
-			{
-				left--;
-				right++;
-			}
-			int tempLen = right - left - 1;
-			if (tempLen > maxLengh)
-			{
-				maxLengh = tempLen;
-				resultStr = s.substr(left + 1, maxLengh);
-			}
-		}
-		return resultStr;
-	}
 };

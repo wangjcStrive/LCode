@@ -19,6 +19,9 @@
     <Filter Include="Header Files\DP">
       <UniqueIdentifier>{637a2bb2-fa17-46df-84be-0c189d31388e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Thread">
+      <UniqueIdentifier>{eb60cccf-ec6d-47fd-a159-f873d264d016}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -116,6 +119,9 @@
     </ClInclude>
     <ClInclude Include="LongestPalindromicSubstring_5.h">
       <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintInOrder_1114.h">
+      <Filter>Header Files\Thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

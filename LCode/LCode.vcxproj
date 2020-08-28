@@ -175,6 +175,7 @@
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PrintInOrder_1114.h" />
     <ClInclude Include="ReverseLinkedList.h" />
     <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SimplifyPath_71.h" />

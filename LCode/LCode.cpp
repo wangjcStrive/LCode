@@ -26,6 +26,7 @@
 #include "CoinChange_322.h"
 #include "LongestIncreasingSubsequence_300.h"
 #include "LongestPalindromicSubstring_5.h"
+//#include "PrintInOrder_1114.h"
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -48,7 +49,8 @@ using namespace std;
 //#define LargestRectangleInHistogram_84
 //#define ValidParentheses_20
 //#define CoinChange_322
-#define LongestPalindromicSubstring
+//#define LongestPalindromicSubstring
+#define Print_In_Order_1114
 
 void printVector(vector<int> input)
 {
@@ -87,6 +89,14 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Print_In_Order_1114
+		//std::thread t1(threadTest1);
+		//Sleep(2000);
+		//std::thread t2(threadTest2);
+		//Sleep(2000);
+		//std::thread t3(threadTest3);
+#endif // Print_In_Order_1114
+
 
 #ifdef LongestPalindromicSubstring
 		LongestPalindromicSubstring_5 ins;
