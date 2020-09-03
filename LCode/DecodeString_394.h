@@ -192,7 +192,7 @@ public:
 			{
 				res = res + s[i];
 			}
-			else if (s[i] == '[') //将‘[’前的数字压入nums栈内， 字母字符串压入strs栈内
+			else if (s[i] == '[') //将‘[’前的数字压入nums栈内， 字母字符串压入strs栈内. 第一次遇到'['时，res是空，也需要push到strs里去!!!
 			{
 				nums.push(num);
 				num = 0;

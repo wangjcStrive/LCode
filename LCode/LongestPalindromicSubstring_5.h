@@ -1,9 +1,7 @@
 #include "solutions.h"
 
 /*
-	Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-
-	Example 1:
+	5. Longest Palindromic Substring
 
 	Input: "babad"
 	Output: "bab"
@@ -69,7 +67,7 @@ public:
 			1. j-i=1. 相邻元素，只需判断s[j] == s[i]
 			2. j-i-2. 只要s[j] == s[i]，一定回文
 			3. j-i>2. s[j] == s[i] && DP[i+1][j-1]时回文。如何保证自底向上，保证DP[i+1][j-1]在DP[i][j]之前计算
-
+		O(n^2)
 		Runtime: 280 ms, faster than 29.81% of C++ online submissions for Longest Palindromic Substring.
 		Memory Usage: 184.5 MB, less than 5.03% of C++ online submissions for Longest Palindromic Substring.
 	*/

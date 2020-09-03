@@ -171,7 +171,7 @@
     <ClInclude Include="LongestIncreasingSubsequence_300.h" />
     <ClInclude Include="LongestPalindromicSubstring_5.h" />
     <ClInclude Include="MaximalRectangle_85.h" />
-    <ClInclude Include="MaximumSubarray.h" />
+    <ClInclude Include="MaximumSubarray_53.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />

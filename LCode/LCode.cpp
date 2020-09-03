@@ -26,6 +26,7 @@
 #include "CoinChange_322.h"
 #include "LongestIncreasingSubsequence_300.h"
 #include "LongestPalindromicSubstring_5.h"
+#include "MaximumSubarray_53.h"
 //#include "PrintInOrder_1114.h"
 using namespace std;
 
@@ -50,7 +51,8 @@ using namespace std;
 //#define ValidParentheses_20
 //#define CoinChange_322
 //#define LongestPalindromicSubstring
-#define Print_In_Order_1114
+//#define Print_In_Order_1114
+#define Maximum_Subarray_53
 
 void printVector(vector<int> input)
 {
@@ -89,6 +91,18 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Maximum_Subarray_53
+		vector<int> input1 = { -2,1,-3,4,-1,2,1,-5,4 };
+		vector<int> input2 = { 1 };
+		vector<int> input3 = { -1, -2, -3, -4};
+		vector<int> input4 = { 1,2,3,4};
+		MaximumSubarray_53 ins;
+		cout << ins.maxSubArray(input1) << endl;
+		cout << ins.maxSubArray(input2) << endl;
+		cout << ins.maxSubArray(input3) << endl;
+		cout << ins.maxSubArray(input4) << endl;
+#endif // Maximum_Subarray_53
+
 #ifdef Print_In_Order_1114
 		//std::thread t1(threadTest1);
 		//Sleep(2000);
@@ -178,8 +192,7 @@ int main()
 
 #ifdef Decode_String_394
 		DecodeString ins;
-		std::cout << "xxxxx" << endl;
-		std::cout << ins.decodeString("2[a11[c]]") << endl;
+		std::cout << ins.decodeString("2[a3[c]b]") << endl;
 #endif // Decode_String_394
 
 
