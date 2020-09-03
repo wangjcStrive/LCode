@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include <chrono>
 #include "solutions.h"
+//#include "PrintInOrder_1114.h"
 #include "LetterCombinationsOfaPhoneNumber.h"
 #include "PartitionList.h"
 #include "LIS.h"
@@ -27,7 +28,9 @@
 #include "LongestIncreasingSubsequence_300.h"
 #include "LongestPalindromicSubstring_5.h"
 #include "MaximumSubarray_53.h"
-//#include "PrintInOrder_1114.h"
+#include "MinimumPathSum_64.h"
+#include "ClimbingStairs_70.h"
+
 using namespace std;
 
 //#define LETTER_COMBINATION_PHONE_NUMBER_17;
@@ -52,7 +55,9 @@ using namespace std;
 //#define CoinChange_322
 //#define LongestPalindromicSubstring
 //#define Print_In_Order_1114
-#define Maximum_Subarray_53
+//#define Maximum_Subarray_53
+//#define Minimum_Path_Sum_64
+#define Climbing_Stairs_70
 
 void printVector(vector<int> input)
 {
@@ -91,6 +96,23 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Climbing_Stairs_70
+		ClimbingStairs_70 ins;
+		cout << ins.climbStairs(4) << endl;
+#endif // Climbing_Stairs_70
+
+
+
+#ifdef Minimum_Path_Sum_64
+		vector<vector<int>> input = { {1,3,1} ,{1,5,1},{4,2,1} };
+		vector<vector<int>> input_long = { {5,0,1,1,2,1,0,1,3,6,3,0,7,3,3,3,1},{1,4,1,8,5,5,5,6,8,7,0,4,3,9,9,6,0},{2,8,3,3,1,6,1,4,9,0,9,2,3,3,3,8,4},{3,5,1,9,3,0,8,3,4,3,4,6,9,6,8,9,9},{3,0,7,4,6,6,4,6,8,8,9,3,8,3,9,3,4},{8,8,6,8,3,3,1,7,9,3,3,9,2,4,3,5,1},{7,1,0,4,7,8,4,6,4,2,1,3,7,8,3,5,4},{3,0,9,6,7,8,9,2,0,4,6,3,9,7,2,0,7},{8,0,8,2,6,4,4,0,9,3,8,4,0,4,7,0,4},{3,7,4,5,9,4,9,7,9,8,7,4,0,4,2,0,4},{5,9,0,1,9,1,5,9,5,5,3,4,6,9,8,5,6},{5,7,2,4,4,4,2,1,8,4,8,0,5,4,7,4,7},{9,5,8,6,4,4,3,9,8,1,1,8,7,7,3,6,9},{7,2,3,1,6,3,6,6,6,3,2,3,9,9,4,4,8} };
+		MinimumPathSum_64 ins;
+		cout << ins.minPathSum(input_long) << endl;
+		//cout << ins.minPathSum_recursive(input) << endl;
+		//cout << ins.minPathSum_recursive(input_long) << endl;
+#endif // Minimum_Path_Sum_64
+
+
 #ifdef Maximum_Subarray_53
 		vector<int> input1 = { -2,1,-3,4,-1,2,1,-5,4 };
 		vector<int> input2 = { 1 };

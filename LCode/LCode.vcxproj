@@ -91,6 +91,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,7 +154,7 @@
   <ItemGroup>
     <ClInclude Include="AllSortSolutions.h" />
     <ClInclude Include="BestTimetoBuyandSellStock.h" />
-    <ClInclude Include="ClimbingStairs.h" />
+    <ClInclude Include="ClimbingStairs_70.h" />
     <ClInclude Include="CoinChange.h" />
     <ClInclude Include="CoinChange_322.h" />
     <ClInclude Include="CourseSchedule.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="LongestPalindromicSubstring_5.h" />
     <ClInclude Include="MaximalRectangle_85.h" />
     <ClInclude Include="MaximumSubarray_53.h" />
+    <ClInclude Include="MinimumPathSum_64.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
@@ -182,6 +184,7 @@
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
+    <ClInclude Include="UniquePaths_62.h" />
     <ClInclude Include="ValidParentheses_20.h" />
     <ClInclude Include="WordBreak.h" />
   </ItemGroup>

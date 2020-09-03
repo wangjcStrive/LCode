@@ -45,9 +45,6 @@
     <ClInclude Include="CoinChange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ClimbingStairs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WordBreak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -121,6 +118,15 @@
       <Filter>Header Files\Thread</Filter>
     </ClInclude>
     <ClInclude Include="MaximumSubarray_53.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="UniquePaths_62.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimumPathSum_64.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="ClimbingStairs_70.h">
       <Filter>Header Files\DP</Filter>
     </ClInclude>
   </ItemGroup>
