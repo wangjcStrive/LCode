@@ -5,6 +5,7 @@
 #include <time.h>
 #include <Windows.h>
 #include <chrono>
+#include <thread>
 #include "solutions.h"
 //#include "PrintInOrder_1114.h"
 #include "LetterCombinationsOfaPhoneNumber.h"
@@ -30,6 +31,9 @@
 #include "MaximumSubarray_53.h"
 #include "MinimumPathSum_64.h"
 #include "ClimbingStairs_70.h"
+#include "BestTimeToBuyAndSellStock_121.h"
+//#include "PrintFooBarAlternately_1115.h"
+#include "WordBreak_139.h"
 
 using namespace std;
 
@@ -57,8 +61,14 @@ using namespace std;
 //#define Print_In_Order_1114
 //#define Maximum_Subarray_53
 //#define Minimum_Path_Sum_64
-#define Climbing_Stairs_70
+//#define Climbing_Stairs_70
+//#define Best_Time_To_Buy_And_Sell_Stock_121
+//#define Print_FooBar_Alternately_1115
+//#define Thread_Study
+//#define CPP_DEMO
+#define Word_Break_139
 
+#pragma region PrintFunc
 void printVector(vector<int> input)
 {
 	for (auto x : input)
@@ -75,7 +85,6 @@ void printLinkList(ListNode* head)
 	}
 	std::cout << endl;
 }
-
 ListNode* createListNode(int len)
 {
 	ListNode* head = (ListNode*)malloc(sizeof(ListNode));
@@ -90,12 +99,109 @@ ListNode* createListNode(int len)
 	tempHead->next = NULL;
 	return head;
 }
+#pragma endregion
+
+#pragma region ThreadStudy
+/*
+	void threadRun(ThreadDemo& ins, int id)
+	{
+		cout << "Thread " << id << endl;
+		if (id == 1)
+		{
+			ins.first();
+		}
+		else if (id == 2)
+		{
+			ins.second();
+		}
+		else if (id == 3)
+		{
+			ins.third();
+		}
+	}
+
+void PrintFooBarAlternately_runThread(PrintFooBarAlternately_1115& ins, int threadID)
+{
+	if (threadID == 1)
+		ins.foo();
+	else
+		ins.bar();
+}
+std::atomic_flag atomicFlag = ATOMIC_FLAG_INIT;
+std::stringstream stream;
+void append_number(int x)
+{
+	while (atomicFlag.test_and_set())
+	{
+	}
+	cout << "thread #" << x << '\n';
+	atomicFlag.clear();
+}
+*/
+#pragma endregion
+
 
 int main()
 {
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Word_Break_139
+		WordBreak_139 ins;
+		vector<string> wordDict1 = { "leet", "code" };
+		vector<string> wordDict2 = { "apple", "pen" };
+		vector<string> wordDict3 = { "aaaa", "aaa" };
+		//cout << ins.wordBreak("leetcode", wordDict1) << endl;
+		//cout << ins.wordBreak("applepenapple", wordDict2) << endl;
+		//cout << ins.wordBreak("applepenapple11", wordDict2) << endl;
+		//cout << ins.wordBreak("aaaaaaa", wordDict3) << endl;
+		cout << ins.wordBreak_DFS("leetcode", wordDict1) << endl;
+
+#endif // Word_Break_139
+
+
+
+
+#ifdef CPP_DEMO
+#endif // CPP_DEMO
+
+
+#ifdef Thread_Study
+		vector<std::thread> threads;
+		for (int i = 0; i < 10; i++)
+		{
+			threads.push_back(std::thread(append_number, i));
+		}
+		for (auto& th : threads)
+		{
+
+		}
+#endif // Thread_Study
+
+
+
+
+#ifdef Print_FooBar_Alternately_1115
+		PrintFooBarAlternately_1115 ins(30);
+		std::thread t1(PrintFooBarAlternately_runThread, std::ref(ins), 1);
+		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+		std::thread t2(PrintFooBarAlternately_runThread, std::ref(ins), 2);
+		t1.join();
+		t2.join();
+#endif // Print_FooBar_Alternately_1115
+
+
+
+
+#ifdef Best_Time_To_Buy_And_Sell_Stock_121
+		vector<int> input{ 7,1,5,3,6,4 };
+		vector<int> input1{ 7,6,5,3,1 };
+		BestTimeToBuyAndSellStock_121 ins;
+		cout << ins.maxProfit(input) << endl;
+		cout << ins.maxProfit(input1) << endl;
+#endif // Best_Time_To_Buy_And_Sell_Stock_121
+
+
 #ifdef Climbing_Stairs_70
 		ClimbingStairs_70 ins;
 		cout << ins.climbStairs(4) << endl;
@@ -131,6 +237,31 @@ int main()
 		//std::thread t2(threadTest2);
 		//Sleep(2000);
 		//std::thread t3(threadTest3);
+
+		ThreadDemo ins;
+		// 1 -> 2 -> 3
+		/*
+			std::thread t1(threadRun, std::ref(ins), 1);
+			t1.join();
+			std::thread t2(threadRun, std::ref(ins), 2);
+			t2.join();
+			std::thread t3(threadRun, std::ref(ins), 3);
+			t3.join();
+		*/
+
+		// 3 -> 2 -> 1
+		std::thread t3(threadRun, std::ref(ins), 3);
+
+		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+		std::thread t2(threadRun, std::ref(ins), 2);
+
+		std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+		std::thread t1(threadRun, std::ref(ins), 1);
+		t3.join();
+		t2.join();
+		t1.join();
+
+
 #endif // Print_In_Order_1114
 
 

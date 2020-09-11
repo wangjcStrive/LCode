@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="AllSortSolutions.h" />
     <ClInclude Include="BestTimetoBuyandSellStock.h" />
+    <ClInclude Include="BestTimeToBuyAndSellStock_121.h" />
     <ClInclude Include="ClimbingStairs_70.h" />
     <ClInclude Include="CoinChange.h" />
     <ClInclude Include="CoinChange_322.h" />
@@ -177,16 +178,20 @@
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PrintFooBarAlternately_1115.h" />
     <ClInclude Include="PrintInOrder_1114.h" />
     <ClInclude Include="ReverseLinkedList.h" />
     <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SimplifyPath_71.h" />
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
+    <ClInclude Include="StdMove.h" />
+    <ClInclude Include="ThreadStudy.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
     <ClInclude Include="UniquePaths_62.h" />
     <ClInclude Include="ValidParentheses_20.h" />
     <ClInclude Include="WordBreak.h" />
+    <ClInclude Include="WordBreak_139.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LCode.cpp" />
