@@ -151,11 +151,11 @@ int main()
 		vector<string> wordDict1 = { "leet", "code" };
 		vector<string> wordDict2 = { "apple", "pen" };
 		vector<string> wordDict3 = { "aaaa", "aaa" };
-		//cout << ins.wordBreak("leetcode", wordDict1) << endl;
-		//cout << ins.wordBreak("applepenapple", wordDict2) << endl;
-		//cout << ins.wordBreak("applepenapple11", wordDict2) << endl;
-		//cout << ins.wordBreak("aaaaaaa", wordDict3) << endl;
-		cout << ins.wordBreak_DFS("leetcode", wordDict1) << endl;
+		cout << ins.wordBreak_DP_set("leetcode", wordDict1) << endl;
+		cout << ins.wordBreak_DP_set("applepenapple", wordDict2) << endl;
+		cout << ins.wordBreak_DP_set("applepenapple11", wordDict2) << endl;
+		cout << ins.wordBreak_DP_set("aaaaaaa", wordDict3) << endl;
+		//cout << ins.wordBreak_DFS("leetcode", wordDict1) << endl;
 
 #endif // Word_Break_139
 
