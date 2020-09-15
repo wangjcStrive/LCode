@@ -62,11 +62,11 @@ using namespace std;
 //#define Maximum_Subarray_53
 //#define Minimum_Path_Sum_64
 //#define Climbing_Stairs_70
-//#define Best_Time_To_Buy_And_Sell_Stock_121
+#define Best_Time_To_Buy_And_Sell_Stock_121
 //#define Print_FooBar_Alternately_1115
 //#define Thread_Study
 //#define CPP_DEMO
-#define Word_Break_139
+//#define Word_Break_139
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
