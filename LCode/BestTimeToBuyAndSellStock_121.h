@@ -33,6 +33,7 @@ public:
 	}
 
 	/*
+		倒序遍历一遍，记录每个位置右边的最大值
 		Runtime: 16 ms, faster than 39.45% of C++ online submissions for Best Time to Buy and Sell Stock.
 		Memory Usage: 13.1 MB, less than 50.51% of C++ online submissions for Best Time to Buy and Sell Stock.
 		O(2n)
@@ -54,6 +55,29 @@ public:
 		for (int i = 0; i < length - 1; i++)
 		{
 			int temp = maxRight[i] - prices[i];
+			if (temp > maxValue)
+				maxValue = temp;
+		}
+		return maxValue;
+	}
+	/*
+		求出最大值后，直接用右边的最大值减去当前的值就好了，不需要遍历两边
+		Runtime: 8 ms, faster than 96.69% of C++ online submissions for Best Time to Buy and Sell Stock.
+		Memory Usage: 13.1 MB, less than 55.87% of C++ online submissions for Best Time to Buy and Sell Stock.	
+	*/
+	int maxProfit_optimize(vector<int>& prices)
+	{
+		int length = prices.size();
+		int max_right_value = INT_MIN;
+		int maxValue = 0;
+		for (int i = length - 2; i >= 0; i--)
+		{
+			if (prices[i + 1] > max_right_value)
+			{
+				max_right_value = prices[i + 1];
+			}
+
+			int temp = max_right_value - prices[i];
 			if (temp > maxValue)
 				maxValue = temp;
 		}
