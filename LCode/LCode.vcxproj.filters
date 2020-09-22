@@ -147,6 +147,9 @@
     <ClInclude Include="StdMove.h">
       <Filter>Header Files\CPPDemo</Filter>
     </ClInclude>
+    <ClInclude Include="PalindromicSubstrings_647.h">
+      <Filter>Header Files\DP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

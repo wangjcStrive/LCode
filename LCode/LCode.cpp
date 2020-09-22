@@ -34,6 +34,7 @@
 #include "BestTimeToBuyAndSellStock_121.h"
 //#include "PrintFooBarAlternately_1115.h"
 #include "WordBreak_139.h"
+#include "PalindromicSubstrings_647.h"
 
 using namespace std;
 
@@ -62,11 +63,12 @@ using namespace std;
 //#define Maximum_Subarray_53
 //#define Minimum_Path_Sum_64
 //#define Climbing_Stairs_70
-#define Best_Time_To_Buy_And_Sell_Stock_121
+//#define Best_Time_To_Buy_And_Sell_Stock_121
 //#define Print_FooBar_Alternately_1115
 //#define Thread_Study
 //#define CPP_DEMO
 //#define Word_Break_139
+#define Palindromic_Substrings_647
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -146,6 +148,17 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Palindromic_Substrings_647
+		PalindromicSubstrings_647 ins;
+		//cout << "aaa: " << ins.countSubstrings_1D_DP("aaa") << endl;
+		//cout << "abc: " << ins.countSubstrings_1D_DP("abc") << endl;
+		//cout << "aba: " << ins.countSubstrings_1D_DP("aba") << endl;
+		//cout << "a: " << ins.countSubstrings_1D_DP("a") << endl;
+		cout << "fdsklf: " << ins.countSubstrings_1D_DP("fdsklf") << endl;
+
+#endif // Palindromic_Substrings_647
+
+
 #ifdef Word_Break_139
 		WordBreak_139 ins;
 		vector<string> wordDict1 = { "leet", "code" };

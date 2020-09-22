@@ -176,6 +176,7 @@
     <ClInclude Include="MaximumSubarray_53.h" />
     <ClInclude Include="MinimumPathSum_64.h" />
     <ClInclude Include="MinStack.h" />
+    <ClInclude Include="PalindromicSubstrings_647.h" />
     <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PrintFooBarAlternately_1115.h" />
