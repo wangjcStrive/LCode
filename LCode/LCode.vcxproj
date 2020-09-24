@@ -187,6 +187,7 @@
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="StdMove.h" />
+    <ClInclude Include="TaskScheduler_621.h" />
     <ClInclude Include="ThreadStudy.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
     <ClInclude Include="UniquePaths_62.h" />

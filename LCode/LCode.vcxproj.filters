@@ -25,6 +25,9 @@
     <Filter Include="Header Files\CPPDemo">
       <UniqueIdentifier>{cafb4a36-e812-4fde-b6db-709730eac8c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\NewCase">
+      <UniqueIdentifier>{c3827c8f-8eac-4e0a-a398-4c2f4ba9d522}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -149,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="PalindromicSubstrings_647.h">
       <Filter>Header Files\DP</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskScheduler_621.h">
+      <Filter>Header Files\NewCase</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

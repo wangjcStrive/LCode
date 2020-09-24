@@ -35,6 +35,7 @@
 //#include "PrintFooBarAlternately_1115.h"
 #include "WordBreak_139.h"
 #include "PalindromicSubstrings_647.h"
+#include "TaskScheduler_621.h"
 
 using namespace std;
 
@@ -68,7 +69,8 @@ using namespace std;
 //#define Thread_Study
 //#define CPP_DEMO
 //#define Word_Break_139
-#define Palindromic_Substrings_647
+//#define Palindromic_Substrings_647
+#define Task_Scheduler_621
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -148,6 +150,19 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Task_Scheduler_621
+		TaskScheduler_621 ins;
+		vector<char> input1 = { 'A', 'A','B','B','B','C','C','C','C' };
+		vector<char> input2 = { 'A', 'A', 'A','B','B','B','C','C','C' };
+		vector<char> input3 = { 'A', 'A','B','B','B','C','C','C','C' };
+		vector<char> input4 = { 'A', 'A','B','B','B','C','C','C','C' };
+		cout << ins.leastInterval(input1, 3) << endl;
+		cout << ins.leastInterval(input2, 2) << endl;
+		cout << ins.leastInterval(input3, 3) << endl;
+#endif // Task_Scheduler_621
+
+
+
 #ifdef Palindromic_Substrings_647
 		PalindromicSubstrings_647 ins;
 		//cout << "aaa: " << ins.countSubstrings_1D_DP("aaa") << endl;
