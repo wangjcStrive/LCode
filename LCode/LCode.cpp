@@ -36,6 +36,8 @@
 #include "WordBreak_139.h"
 #include "PalindromicSubstrings_647.h"
 #include "TaskScheduler_621.h"
+#include "TwoSum_1.h"
+#include "LongestSubstringWithoutRepeatingCharacters_3.h"
 
 using namespace std;
 
@@ -70,7 +72,9 @@ using namespace std;
 //#define CPP_DEMO
 //#define Word_Break_139
 //#define Palindromic_Substrings_647
-#define Task_Scheduler_621
+//#define Task_Scheduler_621
+//#define Two_Sum_1
+#define Longest_Substring_Without_Repeating_Characters_3
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -150,6 +154,45 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Longest_Substring_Without_Repeating_Characters_3
+		LongestSubstringWithoutRepeatingCharacters_3 ins;
+		cout << ins.lengthOfLongestSubstring("abcda") << endl;
+		cout << ins.lengthOfLongestSubstring("abcabcbb") << endl;
+		cout << ins.lengthOfLongestSubstring("bbbbb") << endl;
+		cout << ins.lengthOfLongestSubstring("pwwkew") << endl;
+#endif // Longest_Substring_Without_Repeating_Characters_3
+
+
+
+#ifdef Two_Sum_1
+		TwoSum_1 ins;
+		vector<int> input1 = { 2,5,5,11 };
+		vector<int> input2 = {3,3};
+		vector<int> input3 = {3,1,2};
+		auto result = ins.twoSum(input1, 10);
+		for (auto x : result)
+		{
+			cout << x << "  ";
+		}
+		cout << endl;
+		result = ins.twoSum(input2, 6);
+		for (auto x : result)
+		{
+			cout << x << "  ";
+		}
+		cout << endl;
+
+		result = ins.twoSum(input3, 3);
+		for (auto x : result)
+		{
+			cout << x << "  ";
+		}
+		cout << endl;
+#endif // Two_Sum_1
+
+
+
+
 #ifdef Task_Scheduler_621
 		TaskScheduler_621 ins;
 		vector<char> input1 = { 'A', 'A','B','B','B','C','C','C','C' };

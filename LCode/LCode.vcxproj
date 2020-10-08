@@ -172,6 +172,7 @@
     <ClInclude Include="LIS.h" />
     <ClInclude Include="LongestIncreasingSubsequence_300.h" />
     <ClInclude Include="LongestPalindromicSubstring_5.h" />
+    <ClInclude Include="LongestSubstringWithoutRepeatingCharacters_3.h" />
     <ClInclude Include="MaximalRectangle_85.h" />
     <ClInclude Include="MaximumSubarray_53.h" />
     <ClInclude Include="MinimumPathSum_64.h" />
@@ -190,6 +191,7 @@
     <ClInclude Include="TaskScheduler_621.h" />
     <ClInclude Include="ThreadStudy.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
+    <ClInclude Include="TwoSum_1.h" />
     <ClInclude Include="UniquePaths_62.h" />
     <ClInclude Include="ValidParentheses_20.h" />
     <ClInclude Include="WordBreak.h" />

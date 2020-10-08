@@ -28,6 +28,9 @@
     <Filter Include="Header Files\NewCase">
       <UniqueIdentifier>{c3827c8f-8eac-4e0a-a398-4c2f4ba9d522}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hash">
+      <UniqueIdentifier>{6ecc2eb8-66ea-476e-9c4f-e494660c6fec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -155,6 +158,12 @@
     </ClInclude>
     <ClInclude Include="TaskScheduler_621.h">
       <Filter>Header Files\NewCase</Filter>
+    </ClInclude>
+    <ClInclude Include="TwoSum_1.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubstringWithoutRepeatingCharacters_3.h">
+      <Filter>Header Files\Hash</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

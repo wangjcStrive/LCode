@@ -13,6 +13,7 @@ bool cmpVec(pair<char, int> left, pair<char, int> right)
 class TaskScheduler_621 {
 public:
 	/*
+		应当尽早安排出现次数较多的任务
 		n+1个任务为一轮，同一轮中一个任务最多只能被安排一次。每一轮选择剩余次数最多的n+1个任务依次执行
 		用一个26位的vector，每一位代替一个字符
 
@@ -96,95 +97,4 @@ public:
 		}
 		return result;
     }
-
-	int leastInterval_LC(vector<char>& tasks, int n) {
-		/*
-			26位的数组，每位代表该字符出现的次数
-		*/
-		vector<int> freq(26);
-		for (char c : tasks) 
-			freq[c - 'A']++;
-
-		sort(freq.begin(), freq.end());
-		int res = (n + 1) * (freq[25] - 1);
-		for (int i = 25; i >= 0; --i)
-		{
-			if (freq[i] == freq[25])
-				res++;
-		}
-		return max(res, (int)tasks.size());
-	}
-
-
-	int countSubstrings(string s)
-	{
-		unsigned int result = 0;
-		int length = s.size();
-		vector<vector<bool>> DP(length, vector<bool>(length, false));
-		for (int j = 0; j < length; j++)
-		{
-			for (int i = 0; i <= j; i++)
-			{
-				int temp = j - i;
-				if (temp == 0)
-				{
-					DP[i][j] = true;
-					result++;
-				}
-				else if (temp == 1)
-				{
-					if (s[i] == s[j])
-					{
-						DP[i][j] = true;
-						result++;
-					}
-				}
-				else
-				{
-					if (s[i] == s[j] && DP[i + 1][j - 1] == true)
-					{
-						DP[i][j] = true;
-						result++;
-					}
-				}
-			}
-		}
-		return result;
-	}
-
-	int countSubstringaaaas(string s)
-	{
-		unsigned int result = 0;
-		int length = s.size();
-		vector<vector<bool>> DP(length, vector<bool>(length, false));
-		for (int j = 0; j < length; j++)
-		{
-			for (int i = 0; i <= j; i++)
-			{
-				int temp = j - i;
-				if (temp == 0)
-				{
-					DP[i][j] = true;
-					result++;
-				}
-				else if (temp == 1)
-				{
-					if (s[i] == s[j])
-					{
-						DP[i][j] = true;
-						result++;
-					}
-				}
-				else
-				{
-					if (s[i] == s[j] && DP[i + 1][j - 1] == true)
-					{
-						DP[i][j] = true;
-						result++;
-					}
-				}
-			}
-		}
-		return result;
-	}
 };
