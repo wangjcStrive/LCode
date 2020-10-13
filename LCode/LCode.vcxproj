@@ -185,6 +185,7 @@
     <ClInclude Include="ReverseLinkedList.h" />
     <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SimplifyPath_71.h" />
+    <ClInclude Include="SingleNumber_136.h" />
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="StdMove.h" />

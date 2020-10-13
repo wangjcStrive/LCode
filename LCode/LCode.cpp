@@ -38,6 +38,7 @@
 #include "TaskScheduler_621.h"
 #include "TwoSum_1.h"
 #include "LongestSubstringWithoutRepeatingCharacters_3.h"
+#include "SingleNumber_136.h"
 
 using namespace std;
 
@@ -74,7 +75,8 @@ using namespace std;
 //#define Palindromic_Substrings_647
 //#define Task_Scheduler_621
 //#define Two_Sum_1
-#define Longest_Substring_Without_Repeating_Characters_3
+//#define Longest_Substring_Without_Repeating_Characters_3
+#define Single_Number_136
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -154,12 +156,20 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Single_Number_136
+		SingleNumber_136 ins;
+		vector<int> input1 = { 1, 2, 2 };
+		cout << ins.singleNumber(input1) << endl;
+#endif // Single_Number_136
+
+
 #ifdef Longest_Substring_Without_Repeating_Characters_3
 		LongestSubstringWithoutRepeatingCharacters_3 ins;
-		cout << ins.lengthOfLongestSubstring("abcda") << endl;
+		cout << ins.lengthOfLongestSubstring("dvdf") << endl;
 		cout << ins.lengthOfLongestSubstring("abcabcbb") << endl;
 		cout << ins.lengthOfLongestSubstring("bbbbb") << endl;
 		cout << ins.lengthOfLongestSubstring("pwwkew") << endl;
+		cout << ins.lengthOfLongestSubstring(" ") << endl;
 #endif // Longest_Substring_Without_Repeating_Characters_3
 
 
