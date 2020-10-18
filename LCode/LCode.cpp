@@ -159,7 +159,8 @@ int main()
 #ifdef Single_Number_136
 		SingleNumber_136 ins;
 		vector<int> input1 = { 1, 2, 2 };
-		cout << ins.singleNumber(input1) << endl;
+		//cout << ins.singleNumber(input1) << endl;
+		cout << ins.singleNumber_LCode(input1) << endl;
 #endif // Single_Number_136
 
 
