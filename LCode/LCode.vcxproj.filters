@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Hash">
       <UniqueIdentifier>{6ecc2eb8-66ea-476e-9c4f-e494660c6fec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sort">
+      <UniqueIdentifier>{ae7b3cb8-bd86-43b0-a1ef-9de36e3f7d81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -167,6 +170,9 @@
     </ClInclude>
     <ClInclude Include="SingleNumber_136.h">
       <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="AllSortTemplate.h">
+      <Filter>Header Files\Sort</Filter>
     </ClInclude>
     <ClInclude Include="GroupAnagrams_49.h">
       <Filter>Header Files\Hash</Filter>

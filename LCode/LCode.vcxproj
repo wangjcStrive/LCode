@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AllSortSolutions.h" />
+    <ClInclude Include="AllSortTemplate.h" />
     <ClInclude Include="BestTimetoBuyandSellStock.h" />
     <ClInclude Include="BestTimeToBuyAndSellStock_121.h" />
     <ClInclude Include="ClimbingStairs_70.h" />

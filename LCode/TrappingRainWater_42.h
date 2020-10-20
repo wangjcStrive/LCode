@@ -60,7 +60,7 @@ public:
 		
 		vector<int> maxLeft(height.size(), 0);
 		maxLeft[0]=0;
-		for (int current = 1; current < height.size(); current++)
+		for (size_t current = 1; current < height.size(); current++)
 		{
 			maxLeft[current] = max(maxLeft[current - 1], height[current - 1]);
 		}

@@ -39,6 +39,7 @@
 #include "TwoSum_1.h"
 #include "LongestSubstringWithoutRepeatingCharacters_3.h"
 #include "SingleNumber_136.h"
+#include "AllSortTemplate.h"
 
 using namespace std;
 
@@ -76,7 +77,8 @@ using namespace std;
 //#define Task_Scheduler_621
 //#define Two_Sum_1
 //#define Longest_Substring_Without_Repeating_Characters_3
-#define Single_Number_136
+//#define Single_Number_136
+#define ALL_SORT_TEMPLATE
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -156,6 +158,20 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef ALL_SORT_TEMPLATE
+		AllSort<int> ins;
+		vector<int> input = { 5,4,6,3,7,2,8,1 };
+		//ins.insertSort(input);
+		//ins.selectionSort(input);
+		ins.bubbleSort(input);
+		for (auto x : input)
+		{
+			cout << x << endl;
+		}
+#endif // ALL_SORT_TEMPLATE
+
+
+
 #ifdef Single_Number_136
 		SingleNumber_136 ins;
 		vector<int> input1 = { 1, 2, 2 };
