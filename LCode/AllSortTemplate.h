@@ -17,6 +17,41 @@ public:
 	*/
 	void mergeSort(vector<T>& arr)
 	{
+		vector<T> tempArr(arr);
+		mergeSortRecuive(arr, tempArr, 0, arr.size()-1);
+	}
+private:
+	void mergeSortRecuive(vector<T>&originArr, vector<T> & arr, int start, int end)
+	{
+		auto gap = end - start;
+		if (gap<=0)
+			return;
+		if (gap == 1)
+		{
+			if (arr[start] > arr[end])
+				swap(arr[start], arr[end]);
+		}
+		//分成两部分，分别把两部分排好序
+		mergeSortRecuive(originArr, arr, start, end / 2);
+		mergeSortRecuive(originArr, arr, end / 2 + 1, end);
+		//下面一层的已经排好序了，后面需要把分好的两部分合并到一起
+		int i = start;
+		int j = start, k = end/2+1;
+		while (i <= end)
+		{
+			originArr[i] = arr[j] < arr[k] ? arr[j] : arr[k];
+			if (arr[j] < arr[k])
+				j++;
+			else
+				k++;
+		}
+	}
+
+
+public:
+/*
+	void mergeSort(vector<T>& arr)
+	{
 		mergeSortRecursive(arr, 0, arr.size()-1);
 	}
 	void mergeSortRecursive(vector<T>& arr, int start, int end)
@@ -31,7 +66,7 @@ public:
 		mergeSortRecursive(arr, start, end / 2);
 		mergeSortRecursive(arr, end/2+1, end);
 	}
-
+*/
 	/*
 		冒泡. 5 4 3 2 1 -> 4 5 3 2 1 -> ... -> 4 3 2 1 5
 		O(N^2)
