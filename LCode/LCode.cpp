@@ -160,12 +160,12 @@ int main()
 	{
 #ifdef ALL_SORT_TEMPLATE
 		AllSort<int> ins;
-		//vector<int> input = { 5,4,6,3,7,2,8,1 };
-		vector<int> input = { 5,4,3, 2,1 };
+		vector<int> input = { 5,4,6,3,7,2,8,1 };
+		//vector<int> input = { 5,4,3, 2,1 };
 		//ins.insertSort(input);
 		//ins.selectionSort(input);
 		//ins.bubbleSort(input);
-		ins.mergeSort(input);
+		//ins.mergeSort(input);
 		for (auto x : input)
 		{
 			cout << x << endl;

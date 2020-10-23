@@ -13,40 +13,48 @@ template <class T>
 class AllSort {
 public:
 	/*
-		归并
+		由上到下分割直到只有两个元素 -> 把这两个元素排序 -> 由下到上开始merge
+		缺点：
+			需要占用额外的空间
+			递归方法，如果输入比较长，递归的层数太多，造成栈溢出
 	*/
 	void mergeSort(vector<T>& arr)
 	{
-		vector<T> tempArr(arr);
-		mergeSortRecuive(arr, tempArr, 0, arr.size()-1);
+		mergeSortRecursive(arr, 0, arr.size() - 1);
 	}
 private:
-	void mergeSortRecuive(vector<T>&originArr, vector<T> & arr, int start, int end)
+	void mergeSortRecursive(vector<T>& arr, int start, int end)
 	{
 		auto gap = end - start;
-		if (gap<=0)
+		if (gap <= 0)
 			return;
 		if (gap == 1)
 		{
 			if (arr[start] > arr[end])
 				swap(arr[start], arr[end]);
+			return;
 		}
-		//分成两部分，分别把两部分排好序
-		mergeSortRecuive(originArr, arr, start, end / 2);
-		mergeSortRecuive(originArr, arr, end / 2 + 1, end);
-		//下面一层的已经排好序了，后面需要把分好的两部分合并到一起
-		int i = start;
-		int j = start, k = end/2+1;
-		while (i <= end)
-		{
-			originArr[i] = arr[j] < arr[k] ? arr[j] : arr[k];
-			if (arr[j] < arr[k])
-				j++;
-			else
-				k++;
-		}
-	}
+		//分两部分，直到分割的只有两个元素
+		//auto mid = end/2;
+		auto mid = start + (end-start) / 2;		//注意mid的位置
+		mergeSortRecursive(arr, start, mid);
+		mergeSortRecursive(arr, mid + 1, end);
 
+		//下面的已经排好序，现在merger到一起
+		int m = start, n = mid + 1;
+		vector<T> tempVec;
+		for (int i = start; i <= end; i++)
+		{
+			if (m > mid)
+				tempVec.push_back(arr[n++]);
+			else if(n>end)
+				tempVec.push_back(arr[m++]);
+			else
+				tempVec.push_back(arr[m] < arr[n] ? arr[m++] : arr[n++]);
+
+		}
+		std::copy(tempVec.begin(), tempVec.end(), arr.begin() + start);
+	}
 
 public:
 /*
