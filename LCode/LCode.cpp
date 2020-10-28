@@ -159,6 +159,7 @@ int main()
 	try
 	{
 #ifdef ALL_SORT_TEMPLATE
+		// todo. 生成比较大的随机数序列，进行性能测试. 堆排序，读取文件，然后排序后写回到新文件
 		AllSort<int> ins;
 		vector<int> input = { 5,4,6,3,7,2,8,1 };
 		//vector<int> input = { 5,4,3, 2,1 };
@@ -166,6 +167,7 @@ int main()
 		//ins.selectionSort(input);
 		//ins.bubbleSort(input);
 		//ins.mergeSort(input);
+		ins.shellSort(input);
 		for (auto x : input)
 		{
 			cout << x << endl;

@@ -13,11 +13,39 @@ template <class T>
 class AllSort {
 public:
 	/*
+		shell
+	*/
+	void shellSort(vector<T>& arr)
+	{
+		size_t length = arr.size();
+		for (size_t gap = length / 2; gap != 0; gap /= 2)
+		{
+			for (size_t i = 0; i < gap; i++)	//分组
+			{
+				for (size_t j = i; j < length; j += gap)	//对每组进行插入排序
+				{
+					for (size_t k = i; k < j; k += gap)
+					{
+						if (arr[k] > arr[j])
+							swap(arr[k], arr[j]);
+					}
+				}
+			}
+		}
+	}
+
+	/*
+		归并排序
 		由上到下分割直到只有两个元素 -> 把这两个元素排序 -> 由下到上开始merge
+		复杂度
+			时间：O(nlogn):使用了二分法把数组分割
+			空间：O(n)
+		稳定排序
 		缺点：
 			需要占用额外的空间
 			递归方法，如果输入比较长，递归的层数太多，造成栈溢出
 	*/
+	// todo. no recursive solution
 	void mergeSort(vector<T>& arr)
 	{
 		mergeSortRecursive(arr, 0, arr.size() - 1);
@@ -57,24 +85,6 @@ private:
 	}
 
 public:
-/*
-	void mergeSort(vector<T>& arr)
-	{
-		mergeSortRecursive(arr, 0, arr.size()-1);
-	}
-	void mergeSortRecursive(vector<T>& arr, int start, int end)
-	{
-		if (end - start == 1)
-		{
-			if (arr[start] > arr[end])
-				swap(arr[start], arr[end]);
-		}
-		else if (end - start == 0)
-			return;
-		mergeSortRecursive(arr, start, end / 2);
-		mergeSortRecursive(arr, end/2+1, end);
-	}
-*/
 	/*
 		冒泡. 5 4 3 2 1 -> 4 5 3 2 1 -> ... -> 4 3 2 1 5
 		O(N^2)
@@ -126,6 +136,8 @@ public:
 		stabe
 		小规模数据或基本有序时比较高效
 	*/
+	//todo. 下面的写法好像不是最优的...有3层for循环
+	// 因为是从0开始到index，而下面是从index反着来的
 	void insertSort(vector<T>& arr)
 	{
 		for (int i = 1; i < arr.size(); i++)
@@ -144,4 +156,25 @@ public:
 			}
 		}
 	}
+
+	// 从index=1开始，把index位置的元素插入到前面去，从index位置开始向左移动以插入
+	void insertSortNew(vector<T>& arr)
+	{
+		int length = arr.size();
+		for (size_t i = 1; i < length; i++)
+		{
+			int temp = arr[i];
+			int j = i;
+			while (j > 0 && temp < arr[j - 1])
+			{
+				arr[j] = arr[j - 1];
+				j--;
+			}
+			if (j != i)
+				arr[j] = temp;
+		}
+	}
+
+
+
 };

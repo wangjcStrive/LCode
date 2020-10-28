@@ -167,7 +167,6 @@ inline void Sort::shellSort_myOwn(vector<int>& array)
 /*
 	网上的算法还没有搞懂
 */
-// TODO. not understand blow algo
 inline void Sort::shellSort(vector<int> &array, int n)
 {
 	int i, j, k, gap;
