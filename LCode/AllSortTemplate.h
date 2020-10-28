@@ -13,6 +13,40 @@ template <class T>
 class AllSort {
 public:
 	/*
+		quick sort.  分治。
+		平均O(nlogn),最坏O(n^2)。通常快排都是要比O(nlogn)快的。
+		是处理大数据最快的排序方法。O(nlogn) 记号中隐含的常数因子很小，比复杂度稳定等于 O(nlogn) 的归并排序要小很多。所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。
+	*/
+	void quickSort(vector<T>& arr, int low, int high)
+	{
+		if (low < high)
+		{
+			int pivot = partition(arr, low, high); //排完这一遍后，大于pivot的值都在后面，小于pivot的值都在后面了
+			quickSort(arr, low, pivot - 1);
+			quickSort(arr, pivot + 1, high);
+		}
+	}
+
+	int partition(vector<T>& arr, int low, int high)
+	{
+		int pivot = arr[low];
+		while (low < high)
+		{
+			// 由右向左，找到小于pivot的元素，然后交换到low的位置
+			while (low < high && arr[high] >= pivot)
+				high--;
+			arr[low] = arr[high];
+			// 由左向右，找到大于pivot的元素，交换到high的位置
+			while (low < high && arr[low] <= pivot)
+				low++;
+			arr[high] = arr[low];
+		}
+		arr[low] = pivot;
+
+		return low;
+	}
+
+	/*
 		shell
 	*/
 	void shellSort(vector<T>& arr)
