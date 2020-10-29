@@ -168,7 +168,8 @@ int main()
 		//ins.bubbleSort(input);
 		//ins.mergeSort(input);
 		//ins.shellSort(input);
-		ins.quickSort(input, 0, input.size()-1);
+		//ins.quickSort(input, 0, input.size()-1);
+		ins.heapSort(input);
 		for (auto x : input)
 		{
 			cout << x << endl;

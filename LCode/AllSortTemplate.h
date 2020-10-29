@@ -13,6 +13,51 @@ template <class T>
 class AllSort {
 public:
 	/*
+	* https://www.cnblogs.com/chengxiao/p/6129630.html
+		heap.是一种选择排序，最好，最坏，平均复杂度均为O(nlogn). 不稳定
+		堆是有以下性质的完全二叉树：每个节点的值都大于或等于其左右孩子节点的值（大顶堆
+		两个子节点分别是2i+1/2i+2
+		思路
+			1. 将待排序序列构造成一个大顶堆，此时整个序列的最大值就是堆顶的根节点。
+			2. 重复将根节点与末尾元素交换，此时末尾就是最大值.末尾元素换到根节点后需要重新排序满足"根节点比子节点大"，但是此时序列长度减1
+			3. 
+	*/
+	void heapSort(vector<T>& arr)
+	{
+		int length = arr.size();
+		// 原序列构造成一个大顶堆. O(n/2)
+		for (auto i = length / 2 - 1; i>=0; i--)
+			adjustArrToSatisfyHeap(arr, length, i);
+
+		// 重复交换根节点跟末尾节点. O(logn)?
+		for (int tail = length - 1; tail > 0; tail--)
+		{
+			swap(arr[0], arr[tail]);
+			adjustArrToSatisfyHeap(arr, tail, 0);
+		}
+
+	}
+	/*
+		len: 限定序列长度。
+		index: 使得index以下的所有节点满足"根节点比子节点大"
+	*/
+	void adjustArrToSatisfyHeap(vector<T>& arr, int len, int index)
+	{
+		int leftSon = 2 * index+1, rightSon = 2 * index + 2;
+		int maxIndex = index;
+		if (leftSon < len && arr[leftSon] > arr[index])
+			maxIndex = leftSon;
+		if (rightSon < len && arr[rightSon] > arr[maxIndex])
+			maxIndex = rightSon;
+		if (maxIndex != index)
+		{
+			swap(arr[index], arr[maxIndex]);
+			// 交换后不要忘记,重新调整做过交换的子节点
+			adjustArrToSatisfyHeap(arr, len, maxIndex);
+		}
+	}
+
+	/*
 		quick sort.  分治。
 		平均O(nlogn),最坏O(n^2)。通常快排都是要比O(nlogn)快的。
 		是处理大数据最快的排序方法。O(nlogn) 记号中隐含的常数因子很小，比复杂度稳定等于 O(nlogn) 的归并排序要小很多。所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。
