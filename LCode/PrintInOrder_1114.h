@@ -26,6 +26,7 @@ public:
 
     void second(function<void()> printSecond) {
         std::unique_lock<std::mutex> lk(m_mutex);
+        // 仅当条件为false时才会阻塞。如果first先执行了(cv1.notify已经发送)，然后再执行到这里，就永远也等不到cv1.notify了
         cv1.wait(lk, [this]() {return counter == 2; });
 
         printSecond();
@@ -51,6 +52,7 @@ private:
 
 /*
     没有使用条件wait
+    wait(ulk, pred) <=> while(!pred) {wait(ulk)}
 */
 class ThreadDemo {
 public:
@@ -64,6 +66,7 @@ public:
 
     void second() {
         std::unique_lock<std::mutex> lk(m_mutex);
+        // 这个for循环就相当于上面的有条件的wait
         while (m_counter != 2)
         {
             cv1.wait(lk);

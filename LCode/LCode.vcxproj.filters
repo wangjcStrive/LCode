@@ -34,6 +34,9 @@
     <Filter Include="Header Files\Sort">
       <UniqueIdentifier>{ae7b3cb8-bd86-43b0-a1ef-9de36e3f7d81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\tempFiles">
+      <UniqueIdentifier>{8db7877d-4c9f-4c0d-93ee-0e6df88f597b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -146,9 +149,6 @@
     </ClInclude>
     <ClInclude Include="PrintFooBarAlternately_1115.h">
       <Filter>Header Files\Thread</Filter>
-    </ClInclude>
-    <ClInclude Include="ThreadStudy.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WordBreak_139.h">
       <Filter>Header Files</Filter>
