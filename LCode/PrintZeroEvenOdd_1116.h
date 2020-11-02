@@ -13,7 +13,8 @@ public:
 	}
 
 	// printNumber(x) outputs "x", where x is an integer.
-	void zero(function<void(int)> printNumber) {
+	//void zero(function<void(int)> printNumber) {
+	void zero() {
 		if (m_counter <= n)
 		{
 			std::unique_lock<std::mutex> ulk(m_mutex);
@@ -27,16 +28,18 @@ public:
 		}
 	}
 
-	void even(function<void(int)> printNumber) {
+	//void even(function<void(int)> printNumber) {
+	void even() {
 		std::unique_lock<std::mutex> ulk(m_mutex);
 		m_cvEven.wait(ulk, [this]() {return m_counter % 2 == 1; });
 		printNumber(m_counter);
 		m_cvZero.notify_one();
 	}
 
-	void odd(function<void(int)> printNumber) {
+	//void odd(function<void(int)> printNumber) {
+	void odd() {
 		std::unique_lock<std::mutex> ulk(m_mutex);
-		m_cvEven.wait(ulk, [this]() {return m_counter>0 && m_counter % 2 == 0; });
+		m_cvOdd.wait(ulk, [this]() {return m_counter>0 && m_counter % 2 == 0; });
 		printNumber(m_counter);
 		m_cvZero.notify_one();
 	}
@@ -47,4 +50,10 @@ private:
 	std::condition_variable m_cvOdd;
 	std::condition_variable m_cvZero;
 	std::mutex m_mutex;
+
+
+	void printNumber(int num)
+	{
+		cout << num << endl;
+	}
 };

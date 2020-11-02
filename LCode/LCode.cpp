@@ -40,6 +40,7 @@
 #include "LongestSubstringWithoutRepeatingCharacters_3.h"
 #include "SingleNumber_136.h"
 #include "AllSortTemplate.h"
+#include "PrintZeroEvenOdd_1116.h"
 
 using namespace std;
 
@@ -78,7 +79,8 @@ using namespace std;
 //#define Two_Sum_1
 //#define Longest_Substring_Without_Repeating_Characters_3
 //#define Single_Number_136
-#define ALL_SORT_TEMPLATE
+//#define ALL_SORT_TEMPLATE
+#define Zero_Even_Odd_1116
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -152,12 +154,41 @@ void append_number(int x)
 */
 #pragma endregion
 
+// LCode 1116
+void funcZero(ZeroEvenOdd_1116& ins, int n)
+{
+	for (size_t i = 0; i < n; i++)
+		ins.zero();
+}
+void funcEven(ZeroEvenOdd_1116& ins, int n)
+{
+	for (size_t i = 0; i < n && i%2!=0; i++)
+		ins.even();
+}
+void funcOdd(ZeroEvenOdd_1116& ins, int n)
+{
+	for (size_t i = 1; i < n && i%2==0; i++)
+		ins.odd();
+}
+// LCode 1116 end
+
 
 int main()
 {
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Zero_Even_Odd_1116
+		ZeroEvenOdd_1116 ins(3);
+		std::thread tZero(&funcZero, std::ref(ins), 3);
+		std::thread tEven(&funcZero, std::ref(ins), 3);
+		std::thread tOdd(&funcZero, std::ref(ins), 3);
+		tZero.join();
+		tEven.join();
+		tOdd.join();
+#endif // Zero_Even_Odd_1116
+
+
 #ifdef ALL_SORT_TEMPLATE
 		// todo. 生成比较大的随机数序列，进行性能测试. 堆排序，读取文件，然后排序后写回到新文件
 		AllSort<int> ins;
