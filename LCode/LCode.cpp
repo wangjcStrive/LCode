@@ -155,20 +155,20 @@ void append_number(int x)
 #pragma endregion
 
 // LCode 1116
-void funcZero(ZeroEvenOdd_1116& ins, int n)
+void funcZero(ZeroEvenOdd_1116& ins)
 {
-	for (size_t i = 0; i < n; i++)
-		ins.zero();
+	ins.zero();
+	//cout << "zero done!" << endl;
 }
-void funcEven(ZeroEvenOdd_1116& ins, int n)
+void funcEven(ZeroEvenOdd_1116& ins)
 {
-	for (size_t i = 0; i < n && i%2!=0; i++)
-		ins.even();
+	ins.even();
+	//cout << "Even done!" << endl;
 }
-void funcOdd(ZeroEvenOdd_1116& ins, int n)
+void funcOdd(ZeroEvenOdd_1116& ins)
 {
-	for (size_t i = 1; i < n && i%2==0; i++)
-		ins.odd();
+	ins.odd();
+	//cout << "Odd done!" << endl;
 }
 // LCode 1116 end
 
@@ -179,10 +179,11 @@ int main()
 	try
 	{
 #ifdef Zero_Even_Odd_1116
-		ZeroEvenOdd_1116 ins(3);
-		std::thread tZero(&funcZero, std::ref(ins), 3);
-		std::thread tEven(&funcZero, std::ref(ins), 3);
-		std::thread tOdd(&funcZero, std::ref(ins), 3);
+		const int count = 5;
+		ZeroEvenOdd_1116 ins(count);
+		std::thread tZero(funcZero, std::ref(ins));
+		std::thread tOdd(funcOdd, std::ref(ins));
+		std::thread tEven(funcEven, std::ref(ins));
 		tZero.join();
 		tEven.join();
 		tOdd.join();
