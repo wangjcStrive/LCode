@@ -192,6 +192,7 @@
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="StdMove.h" />
+    <ClInclude Include="SubarraySumEqualsK_560.h" />
     <ClInclude Include="TaskScheduler_621.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
     <ClInclude Include="TwoSum_1.h" />

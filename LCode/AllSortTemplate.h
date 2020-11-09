@@ -25,7 +25,7 @@ public:
 	void heapSort(vector<T>& arr)
 	{
 		int length = arr.size();
-		// 原序列构造成一个大顶堆. O(n/2)
+		// 原序列构造成一个大顶堆. O(n/2).从第一个有子节点的地方开始，i--
 		for (auto i = length / 2 - 1; i>=0; i--)
 			adjustArrToSatisfyHeap(arr, length, i);
 
@@ -177,6 +177,27 @@ public:
 			{
 				if (arr[i] > arr[j])
 					swap(arr[i], arr[j]);
+			}
+		}
+	}
+	/*
+		5 4 3 2 1
+		4 5 3 2 1
+		4 3 5 2 1
+		4 3 2 5 1
+		4 3 2 1 5
+	*/
+	void bubbleSort_new(vector<T>& arr)
+	{
+		int length = arr.size();
+		// 长度为n，需要n-1趟，每趟把最大的压到最后
+		// i为第几趟
+		for (size_t i = 0; i < length; i++)
+		{
+			for (size_t j = i; j < length-i-1; j++)
+			{
+				if (arr[j] > arr[j + 1])
+					swap(arr[j], arr[j + 1]);
 			}
 		}
 	}

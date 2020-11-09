@@ -41,6 +41,7 @@
 #include "SingleNumber_136.h"
 #include "AllSortTemplate.h"
 #include "PrintZeroEvenOdd_1116.h"
+#include "SubarraySumEqualsK_560.h"
 
 using namespace std;
 
@@ -80,7 +81,8 @@ using namespace std;
 //#define Longest_Substring_Without_Repeating_Characters_3
 //#define Single_Number_136
 //#define ALL_SORT_TEMPLATE
-#define Zero_Even_Odd_1116
+//#define Zero_Even_Odd_1116
+#define Subarray_Sum_Equal_sK_560
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -176,8 +178,15 @@ void funcOdd(ZeroEvenOdd_1116& ins)
 int main()
 {
 	auto startTime = std::chrono::steady_clock::now();
+	vector<int> input = { 5,4,6,3,7,2,8,1 };
+	vector<int> input1 = {1,1,1};
 	try
 	{
+#ifdef Subarray_Sum_Equal_sK_560
+		SubarraySumEqualsK_560 ins;
+		cout << ins.subarraySum(input1, 2) << endl;
+#endif // Subarray_Sum_Equal_sK_560
+
 #ifdef Zero_Even_Odd_1116
 		const int count = 5;
 		ZeroEvenOdd_1116 ins(count);
