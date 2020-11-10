@@ -180,11 +180,17 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	vector<int> input = { 5,4,6,3,7,2,8,1 };
 	vector<int> input1 = {1,1,1};
+	vector<int> input2 = {1,-1,0};
 	try
 	{
 #ifdef Subarray_Sum_Equal_sK_560
 		SubarraySumEqualsK_560 ins;
-		cout << ins.subarraySum(input1, 2) << endl;
+		cout << ins.subarraySum_prefixSum(input, 9) << endl;
+		cout << ins.subarraySum_prefixSum(input, 10) << endl;
+		cout << ins.subarraySum_prefixSum(input1, 1) << endl;
+		cout << ins.subarraySum_prefixSum(input1, 2) << endl;
+		cout << ins.subarraySum_prefixSum(input1, 3) << endl;
+		cout << ins.subarraySum_prefixSum(input2, 0) << endl;
 #endif // Subarray_Sum_Equal_sK_560
 
 #ifdef Zero_Even_Odd_1116
