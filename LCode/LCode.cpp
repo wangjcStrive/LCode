@@ -8,40 +8,42 @@
 #include <thread>
 #include "solutions.h"
 //#include "PrintInOrder_1114.h"
-#include "LetterCombinationsOfaPhoneNumber.h"
-#include "PartitionList.h"
-#include "LIS.h"
-#include "ThreeSum.h"
-#include "LinkedListCycleII.h"
-#include "RotateImage.h"
-#include "SortList.h"
-#include "AllSortSolutions.h"
-#include "IntersectionofTwoLinkedLists.h"
-#include "ReverseLinkedList.h"
-#include "DailyTemperatures_739.h"
-#include "DecodeString_394.h"
-#include "ImplementQueueUsingStacks_232.h"
-#include "TrappingRainWater_42.h"
-#include "SimplifyPath_71.h"
-#include "LargestRectangleInHistogram_84.h"
-#include "ValidParentheses_20.h"
-#include "CoinChange_322.h"
-#include "LongestIncreasingSubsequence_300.h"
-#include "LongestPalindromicSubstring_5.h"
-#include "MaximumSubarray_53.h"
-#include "MinimumPathSum_64.h"
-#include "ClimbingStairs_70.h"
-#include "BestTimeToBuyAndSellStock_121.h"
-//#include "PrintFooBarAlternately_1115.h"
-#include "WordBreak_139.h"
-#include "PalindromicSubstrings_647.h"
-#include "TaskScheduler_621.h"
-#include "TwoSum_1.h"
-#include "LongestSubstringWithoutRepeatingCharacters_3.h"
-#include "SingleNumber_136.h"
-#include "AllSortTemplate.h"
-#include "PrintZeroEvenOdd_1116.h"
-#include "SubarraySumEqualsK_560.h"
+//#include "LetterCombinationsOfaPhoneNumber.h"
+//#include "PartitionList.h"
+//#include "LIS.h"
+//#include "ThreeSum.h"
+//#include "LinkedListCycleII.h"
+//#include "RotateImage.h"
+//#include "SortList.h"
+//#include "AllSortSolutions.h"
+//#include "IntersectionofTwoLinkedLists.h"
+//#include "ReverseLinkedList.h"
+//#include "DailyTemperatures_739.h"
+//#include "DecodeString_394.h"
+//#include "ImplementQueueUsingStacks_232.h"
+//#include "TrappingRainWater_42.h"
+//#include "SimplifyPath_71.h"
+//#include "LargestRectangleInHistogram_84.h"
+//#include "ValidParentheses_20.h"
+//#include "CoinChange_322.h"
+//#include "LongestIncreasingSubsequence_300.h"
+//#include "LongestPalindromicSubstring_5.h"
+//#include "MaximumSubarray_53.h"
+//#include "MinimumPathSum_64.h"
+//#include "ClimbingStairs_70.h"
+//#include "BestTimeToBuyAndSellStock_121.h"
+////#include "PrintFooBarAlternately_1115.h"
+//#include "WordBreak_139.h"
+//#include "PalindromicSubstrings_647.h"
+//#include "TaskScheduler_621.h"
+//#include "TwoSum_1.h"
+//#include "LongestSubstringWithoutRepeatingCharacters_3.h"
+//#include "SingleNumber_136.h"
+//#include "AllSortTemplate.h"
+//#include "PrintZeroEvenOdd_1116.h"
+//#include "SubarraySumEqualsK_560.h"
+//#include "IsValidSudoku_36.h"
+#include "fourSum_18.h"
 
 using namespace std;
 
@@ -82,7 +84,9 @@ using namespace std;
 //#define Single_Number_136
 //#define ALL_SORT_TEMPLATE
 //#define Zero_Even_Odd_1116
-#define Subarray_Sum_Equal_sK_560
+//#define Subarray_Sum_Equal_sK_560
+//#define Is_Valid_Sudoku
+#define Four_Sum_18
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -157,21 +161,21 @@ void append_number(int x)
 #pragma endregion
 
 // LCode 1116
-void funcZero(ZeroEvenOdd_1116& ins)
-{
-	ins.zero();
-	//cout << "zero done!" << endl;
-}
-void funcEven(ZeroEvenOdd_1116& ins)
-{
-	ins.even();
-	//cout << "Even done!" << endl;
-}
-void funcOdd(ZeroEvenOdd_1116& ins)
-{
-	ins.odd();
-	//cout << "Odd done!" << endl;
-}
+//void funcZero(ZeroEvenOdd_1116& ins)
+//{
+//	ins.zero();
+//	//cout << "zero done!" << endl;
+//}
+//void funcEven(ZeroEvenOdd_1116& ins)
+//{
+//	ins.even();
+//	//cout << "Even done!" << endl;
+//}
+//void funcOdd(ZeroEvenOdd_1116& ins)
+//{
+//	ins.odd();
+//	//cout << "Odd done!" << endl;
+//}
 // LCode 1116 end
 
 
@@ -179,10 +183,39 @@ int main()
 {
 	auto startTime = std::chrono::steady_clock::now();
 	vector<int> input = { 5,4,6,3,7,2,8,1 };
-	vector<int> input1 = {1,1,1};
+	vector<int> input1 = { 1, 0, -1, 0, -2, 2 };
 	vector<int> input2 = {1,-1,0};
+	vector<int> input3 = {0,0,0,0};
+	vector<int> input4 = { -2,-1,-1,1,1,2,2 };
+	vector < vector<char>> twoDInput = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
 	try
 	{
+#ifdef  Four_Sum_18
+		FourSum_18 ins;
+		auto result = ins.fourSum(input1, 0);
+		for (auto x : result)
+		{
+			for (auto y : x)
+				cout << y << " ";
+			cout << endl;
+		}
+		result = ins.fourSum(input4, 0);
+		cout << endl;
+		for (auto x : result)
+		{
+			for (auto y : x)
+				cout << y << " ";
+			cout << endl;
+		}
+#endif // Four_Sum_18
+
+
+
+#ifdef Is_Valid_Sudoku
+		IsValidSudoku_36 ins;
+		cout << ins.isValidSudoku(twoDInput) << endl;
+#endif // Is_Valid_Sudoku
+
 #ifdef Subarray_Sum_Equal_sK_560
 		SubarraySumEqualsK_560 ins;
 		cout << ins.subarraySum_prefixSum(input, 9) << endl;

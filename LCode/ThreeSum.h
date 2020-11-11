@@ -3,6 +3,7 @@
 #include "solutions.h"
 /*
 	15. 3Sum
+	tag: sort.
 	暴力解法复杂度：nlogn?
 	exceptions:
 		input [0,0,0] => output [0,0,0]

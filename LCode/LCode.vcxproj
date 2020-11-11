@@ -162,12 +162,14 @@
     <ClInclude Include="CourseSchedule.h" />
     <ClInclude Include="DailyTemperatures_739.h" />
     <ClInclude Include="DecodeString_394.h" />
+    <ClInclude Include="fourSum_18.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="GroupAnagrams_49.h" />
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="ImplementQueueUsingStacks_232.h" />
     <ClInclude Include="IntersectionofTwoLinkedLists.h" />
+    <ClInclude Include="IsValidSudoku_36.h" />
     <ClInclude Include="LargestRectangleInHistogram_84.h" />
     <ClInclude Include="LetterCombinationsOfaPhoneNumber.h" />
     <ClInclude Include="LinkedListCycleII.h" />
