@@ -187,19 +187,23 @@ int main()
 	vector<int> input2 = {1,-1,0};
 	vector<int> input3 = {0,0,0,0};
 	vector<int> input4 = { -2,-1,-1,1,1,2,2 };
+	vector<int> input5 = { -1,0,1,2,-1,-4 };
+	vector<int> input6 = { 1,0,-1,0,-2,2 };
+	vector<int> input7 = { 3,1,4,2,5,-4,2,4,-5 };
 	vector < vector<char>> twoDInput = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
 	try
 	{
 #ifdef  Four_Sum_18
 		FourSum_18 ins;
-		auto result = ins.fourSum(input1, 0);
-		for (auto x : result)
-		{
-			for (auto y : x)
-				cout << y << " ";
-			cout << endl;
-		}
-		result = ins.fourSum(input4, 0);
+		vector<vector<int>> result;
+		//result = ins.fourSum(input1, 0);
+		//for (auto x : result)
+		//{
+		//	for (auto y : x)
+		//		cout << y << " ";
+		//	cout << endl;
+		//}
+		result = ins.fourSum(input7, -12);
 		cout << endl;
 		for (auto x : result)
 		{

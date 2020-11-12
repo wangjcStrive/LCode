@@ -3,13 +3,16 @@
 
 /*
 	18. Four Sum
+	tag: Sort. TwoPointer
 */
 
 class FourSum_18 {
 public:
 	/*
-		refer to 「15. three sum」
-		避免结果有完全相同的子数组(4个数的下标不同，但是值时相同的)
+		refer to 15. three sum. O(n^3)
+		边界：
+			避免结果有完全相同的子数组(4个数的下标不同，但是值时相同的)
+			i/j确定的前提下，后面的解可能未必只有一个，所以后面结束的条件只能是left>=right
 	*/
     vector<vector<int>> fourSum(vector<int>& nums, int target) 
     {
@@ -31,20 +34,23 @@ public:
 				{
 					int lVal = nums[left];
 					int rVal = nums[right];
-					if (abs(target - twoSum) == lVal + rVal)
+					if (target - twoSum == lVal + rVal)
 					{
 						vector<int> tempVec = { nums[i],nums[j],nums[left],nums[right] };
 						bool isExist = false;
-						for (auto item : result)
+						for (auto item : result)	//exclude same result. value same, but index not same
 						{
 							if (item == tempVec)
 								isExist = true;
 						}
 						if(!isExist)
 							result.push_back({ nums[i],nums[j],nums[left],nums[right] });
-						break;
+						//break;	//can't break, 当前i/j的前提下，从后面选两个数，可能不止一个解
+						left++;
+						right--;
+						continue;
 					}
-					else if (abs(twoSum) < lVal + rVal)
+					else if (target - twoSum < lVal + rVal)
 						right--;
 					else
 						left++;
