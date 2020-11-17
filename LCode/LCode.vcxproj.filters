@@ -183,10 +183,13 @@
     <ClInclude Include="SubarraySumEqualsK_560.h">
       <Filter>Header Files\NewCase</Filter>
     </ClInclude>
-    <ClInclude Include="IsValidSudoku_36.h">
+    <ClInclude Include="fourSum_18.h">
       <Filter>Header Files\NewCase</Filter>
     </ClInclude>
-    <ClInclude Include="fourSum_18.h">
+    <ClInclude Include="IsValidSudoku_36.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="FourSumII_454.h">
       <Filter>Header Files\NewCase</Filter>
     </ClInclude>
   </ItemGroup>

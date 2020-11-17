@@ -3,6 +3,7 @@
 
 /*
     36. Is Valid Sudoku
+	tag: Hash
 	»¹Ã»ÓÐaccept!
 */
 

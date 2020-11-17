@@ -162,6 +162,7 @@
     <ClInclude Include="CourseSchedule.h" />
     <ClInclude Include="DailyTemperatures_739.h" />
     <ClInclude Include="DecodeString_394.h" />
+    <ClInclude Include="FourSumII_454.h" />
     <ClInclude Include="fourSum_18.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />

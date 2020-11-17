@@ -13,6 +13,7 @@ public:
 		边界：
 			避免结果有完全相同的子数组(4个数的下标不同，但是值时相同的)
 			i/j确定的前提下，后面的解可能未必只有一个，所以后面结束的条件只能是left>=right
+		用时超过76%
 	*/
     vector<vector<int>> fourSum(vector<int>& nums, int target) 
     {
