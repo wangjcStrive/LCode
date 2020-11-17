@@ -91,3 +91,54 @@ private:
     std::condition_variable cv2;
     int m_counter = 1;
 };
+
+
+/*
+    执行用时：144 ms, 在所有 C++ 提交中击败了62.75%的用户
+    内存消耗：7.8 MB, 在所有 C++ 提交中击败了5.35%的用户
+*/
+class PrintInOrder_1114_Test
+{
+public:
+    void first()
+    {
+        while (1)
+        {
+            if (m_flag == 1)
+            {
+                std::cout << "1" << endl;
+                m_flag++;
+                break;
+            }
+            Sleep(1);
+        }
+    }
+    void second()
+    {
+        while (true)
+        {
+            if (m_flag == 2)
+            {
+                std::cout << "2" << endl;
+                m_flag++;
+                break;
+            }
+            Sleep(1);
+        }
+    }
+    void third()
+    {
+        while (true)
+        {
+            if (m_flag == 3)
+            {
+                std::cout << "3" << endl;
+                m_flag++;
+                break;
+            }
+            Sleep(1);
+        }
+    }
+private:
+    int m_flag = 1;
+};

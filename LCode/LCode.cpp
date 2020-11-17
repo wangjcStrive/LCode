@@ -43,7 +43,8 @@
 //#include "PrintZeroEvenOdd_1116.h"
 //#include "SubarraySumEqualsK_560.h"
 //#include "IsValidSudoku_36.h"
-#include "fourSum_18.h"
+//#include "fourSum_18.h"
+#include "PrintInOrder_1114_test.h"
 
 using namespace std;
 
@@ -69,6 +70,7 @@ using namespace std;
 //#define CoinChange_322
 //#define LongestPalindromicSubstring
 //#define Print_In_Order_1114
+#define Print_In_Order_1114_TEST
 //#define Maximum_Subarray_53
 //#define Minimum_Path_Sum_64
 //#define Climbing_Stairs_70
@@ -86,7 +88,7 @@ using namespace std;
 //#define Zero_Even_Odd_1116
 //#define Subarray_Sum_Equal_sK_560
 //#define Is_Valid_Sudoku
-#define Four_Sum_18
+//#define Four_Sum_18
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -122,6 +124,22 @@ ListNode* createListNode(int len)
 #pragma endregion
 
 #pragma region ThreadStudy
+	void threadRun(PrintInOrder_1114_Test& ins, int id)
+	{
+		cout << "thread: " << id << endl;
+		if (id == 1)
+		{
+			ins.first();
+		}
+		else if (id == 2)
+		{
+			ins.second();
+		}
+		else if (id == 3)
+		{
+			ins.third();
+		}
+	}
 /*
 	void threadRun(ThreadDemo& ins, int id)
 	{
@@ -420,12 +438,6 @@ int main()
 #endif // Maximum_Subarray_53
 
 #ifdef Print_In_Order_1114
-		//std::thread t1(threadTest1);
-		//Sleep(2000);
-		//std::thread t2(threadTest2);
-		//Sleep(2000);
-		//std::thread t3(threadTest3);
-
 		ThreadDemo ins;
 		// 1 -> 2 -> 3
 		/*
@@ -451,6 +463,18 @@ int main()
 
 
 #endif // Print_In_Order_1114
+#ifdef Print_In_Order_1114_TEST
+		PrintInOrder_1114_Test ins;
+		std::thread t1(threadRun, std::ref(ins), 3);
+		std::this_thread::sleep_for(std::chrono::milliseconds(4000));
+		std::thread t2(threadRun, std::ref(ins), 2);
+		std::this_thread::sleep_for(std::chrono::milliseconds(4000));
+		std::thread t3(threadRun, std::ref(ins), 1);
+		t1.join();
+		t2.join();
+		t3.join();
+#endif // Print_In_Order_1114_TEST
+
 
 
 #ifdef LongestPalindromicSubstring
