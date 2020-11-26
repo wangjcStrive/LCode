@@ -174,9 +174,6 @@
     <ClInclude Include="AllSortTemplate.h">
       <Filter>Header Files\Sort</Filter>
     </ClInclude>
-    <ClInclude Include="GroupAnagrams_49.h">
-      <Filter>Header Files\Hash</Filter>
-    </ClInclude>
     <ClInclude Include="PrintZeroEvenOdd_1116.h">
       <Filter>Header Files\Thread</Filter>
     </ClInclude>
@@ -191,6 +188,9 @@
     </ClInclude>
     <ClInclude Include="FourSumII_454.h">
       <Filter>Header Files\NewCase</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupAnagrams_49.h">
+      <Filter>Header Files\Hash</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

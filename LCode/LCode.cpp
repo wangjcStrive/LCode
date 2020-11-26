@@ -41,10 +41,10 @@
 //#include "SingleNumber_136.h"
 //#include "AllSortTemplate.h"
 //#include "PrintZeroEvenOdd_1116.h"
-//#include "SubarraySumEqualsK_560.h"
+#include "SubarraySumEqualsK_560.h"
 //#include "IsValidSudoku_36.h"
 //#include "fourSum_18.h"
-#include "PrintInOrder_1114_test.h"
+//#include "PrintInOrder_1114_test.h"
 
 using namespace std;
 
@@ -70,7 +70,7 @@ using namespace std;
 //#define CoinChange_322
 //#define LongestPalindromicSubstring
 //#define Print_In_Order_1114
-#define Print_In_Order_1114_TEST
+//#define Print_In_Order_1114_TEST
 //#define Maximum_Subarray_53
 //#define Minimum_Path_Sum_64
 //#define Climbing_Stairs_70
@@ -86,7 +86,7 @@ using namespace std;
 //#define Single_Number_136
 //#define ALL_SORT_TEMPLATE
 //#define Zero_Even_Odd_1116
-//#define Subarray_Sum_Equal_sK_560
+#define Subarray_Sum_Equal_sK_560
 //#define Is_Valid_Sudoku
 //#define Four_Sum_18
 
@@ -124,6 +124,7 @@ ListNode* createListNode(int len)
 #pragma endregion
 
 #pragma region ThreadStudy
+/*
 	void threadRun(PrintInOrder_1114_Test& ins, int id)
 	{
 		cout << "thread: " << id << endl;
@@ -140,7 +141,6 @@ ListNode* createListNode(int len)
 			ins.third();
 		}
 	}
-/*
 	void threadRun(ThreadDemo& ins, int id)
 	{
 		cout << "Thread " << id << endl;
@@ -199,7 +199,6 @@ void append_number(int x)
 
 int main()
 {
-	auto startTime = std::chrono::steady_clock::now();
 	vector<int> input = { 5,4,6,3,7,2,8,1 };
 	vector<int> input1 = { 1, 0, -1, 0, -2, 2 };
 	vector<int> input2 = {1,-1,0};
@@ -209,6 +208,7 @@ int main()
 	vector<int> input6 = { 1,0,-1,0,-2,2 };
 	vector<int> input7 = { 3,1,4,2,5,-4,2,4,-5 };
 	vector < vector<char>> twoDInput = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
 #ifdef  Four_Sum_18
@@ -240,12 +240,15 @@ int main()
 
 #ifdef Subarray_Sum_Equal_sK_560
 		SubarraySumEqualsK_560 ins;
-		cout << ins.subarraySum_prefixSum(input, 9) << endl;
-		cout << ins.subarraySum_prefixSum(input, 10) << endl;
-		cout << ins.subarraySum_prefixSum(input1, 1) << endl;
-		cout << ins.subarraySum_prefixSum(input1, 2) << endl;
-		cout << ins.subarraySum_prefixSum(input1, 3) << endl;
-		cout << ins.subarraySum_prefixSum(input2, 0) << endl;
+		vector<int> vecLong;
+		Solution::readLongVecFromFile(vecLong);
+		cout << ins.subarraySum_prefixSum(vecLong, 12450) << endl;
+		//cout << ins.subarraySum_prefixSum(input, 9) << endl;
+		//cout << ins.subarraySum_prefixSum(input, 10) << endl;
+		//cout << ins.subarraySum_prefixSum(input1, 1) << endl;
+		//cout << ins.subarraySum_prefixSum(input1, 2) << endl;
+		//cout << ins.subarraySum_prefixSum(input1, 3) << endl;
+		//cout << ins.subarraySum_prefixSum(input2, 0) << endl;
 #endif // Subarray_Sum_Equal_sK_560
 
 #ifdef Zero_Even_Odd_1116
