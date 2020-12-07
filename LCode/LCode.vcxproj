@@ -188,6 +188,7 @@
     <ClInclude Include="PrintFooBarAlternately_1115.h" />
     <ClInclude Include="PrintInOrder_1114.h" />
     <ClInclude Include="PrintZeroEvenOdd_1116.h" />
+    <ClInclude Include="ReverseInteger_7.h" />
     <ClInclude Include="ReverseLinkedList.h" />
     <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SimplifyPath_71.h" />

@@ -62,7 +62,7 @@ public:
 		Your memory usage beats 5.01 % of cpp submissions (41.6 MB)
 		没有想太明白这个思路
 	*/
-	int subarraySum(vector<int>& nums, int k) {
+	int subarraySum_LCode(vector<int>& nums, int k) {
 		std::unordered_map<int, int> seen = { {0, 1} };
 		int count = 0, sum = 0;
 		for (auto n : nums) {

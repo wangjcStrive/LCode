@@ -192,6 +192,9 @@
     <ClInclude Include="GroupAnagrams_49.h">
       <Filter>Header Files\Hash</Filter>
     </ClInclude>
+    <ClInclude Include="ReverseInteger_7.h">
+      <Filter>Header Files\NewCase</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

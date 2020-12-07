@@ -41,10 +41,11 @@
 //#include "SingleNumber_136.h"
 //#include "AllSortTemplate.h"
 //#include "PrintZeroEvenOdd_1116.h"
-#include "SubarraySumEqualsK_560.h"
+//#include "SubarraySumEqualsK_560.h"
 //#include "IsValidSudoku_36.h"
 //#include "fourSum_18.h"
 //#include "PrintInOrder_1114_test.h"
+#include "ReverseInteger_7.h"
 
 using namespace std;
 
@@ -86,9 +87,10 @@ using namespace std;
 //#define Single_Number_136
 //#define ALL_SORT_TEMPLATE
 //#define Zero_Even_Odd_1116
-#define Subarray_Sum_Equal_sK_560
+//#define Subarray_Sum_Equal_sK_560
 //#define Is_Valid_Sudoku
 //#define Four_Sum_18
+#define Reverse_Integer_7
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -211,6 +213,14 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Reverse_Integer_7
+		ReverseInteger_7 ins;
+		cout << ins.reverse(-123) << endl;
+		cout << ins.reverse(111) << endl;
+		cout << ins.reverse(-123) << endl;
+		cout << ins.reverse(0) << endl;
+#endif // Reverse_Integer_7
+
 #ifdef  Four_Sum_18
 		FourSum_18 ins;
 		vector<vector<int>> result;
