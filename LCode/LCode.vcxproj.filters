@@ -37,6 +37,9 @@
     <Filter Include="Header Files\tempFiles">
       <UniqueIdentifier>{8db7877d-4c9f-4c0d-93ee-0e6df88f597b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{62197bd7-5d2c-4952-b1ea-f40db8728d8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -193,7 +196,10 @@
       <Filter>Header Files\Hash</Filter>
     </ClInclude>
     <ClInclude Include="ReverseInteger_7.h">
-      <Filter>Header Files\NewCase</Filter>
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="PalindromeNumber_9.h">
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -45,7 +45,8 @@
 //#include "IsValidSudoku_36.h"
 //#include "fourSum_18.h"
 //#include "PrintInOrder_1114_test.h"
-#include "ReverseInteger_7.h"
+//#include "ReverseInteger_7.h"
+#include "PalindromeNumber_9.h"
 
 using namespace std;
 
@@ -90,7 +91,8 @@ using namespace std;
 //#define Subarray_Sum_Equal_sK_560
 //#define Is_Valid_Sudoku
 //#define Four_Sum_18
-#define Reverse_Integer_7
+//#define Reverse_Integer_7
+#define Palindrome_Number_9
 
 #pragma region PrintFunc
 void printVector(vector<int> input)
@@ -213,12 +215,22 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Palindrome_Number_9
+		PalindromeNumber_9 ins;
+		cout << ins.isPalindrome(12321) << endl;
+		cout << ins.isPalindrome(123) << endl;
+		cout << ins.isPalindrome(321) << endl;
+		cout << ins.isPalindrome(-12321) << endl;
+#endif // Palindrome_Number_9
+
+
+
 #ifdef Reverse_Integer_7
 		ReverseInteger_7 ins;
-		cout << ins.reverse(-123) << endl;
-		cout << ins.reverse(111) << endl;
-		cout << ins.reverse(-123) << endl;
-		cout << ins.reverse(0) << endl;
+		cout << ins.reverse_LCode(-123) << endl;
+		cout << ins.reverse_LCode(111) << endl;
+		cout << ins.reverse_LCode(-123) << endl;
+		cout << ins.reverse_LCode(0) << endl;
 #endif // Reverse_Integer_7
 
 #ifdef  Four_Sum_18
