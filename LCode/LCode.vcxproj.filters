@@ -201,6 +201,15 @@
     <ClInclude Include="PalindromeNumber_9.h">
       <Filter>Header Files\Math</Filter>
     </ClInclude>
+    <ClInclude Include="FindAllAnagramsinAString_438.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticDynamicCast.h">
+      <Filter>Header Files\CPPDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="HappyNumber_202.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

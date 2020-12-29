@@ -162,11 +162,13 @@
     <ClInclude Include="CourseSchedule.h" />
     <ClInclude Include="DailyTemperatures_739.h" />
     <ClInclude Include="DecodeString_394.h" />
+    <ClInclude Include="FindAllAnagramsinAString_438.h" />
     <ClInclude Include="FourSumII_454.h" />
     <ClInclude Include="fourSum_18.h" />
     <ClInclude Include="GenerateParentheses.h" />
     <ClInclude Include="GenerateParenthesis.h" />
     <ClInclude Include="GroupAnagrams_49.h" />
+    <ClInclude Include="HappyNumber_202.h" />
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="ImplementQueueUsingStacks_232.h" />
     <ClInclude Include="IntersectionofTwoLinkedLists.h" />
@@ -196,6 +198,7 @@
     <ClInclude Include="SingleNumber_136.h" />
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
+    <ClInclude Include="StaticDynamicCast.h" />
     <ClInclude Include="StdMove.h" />
     <ClInclude Include="SubarraySumEqualsK_560.h" />
     <ClInclude Include="TaskScheduler_621.h" />

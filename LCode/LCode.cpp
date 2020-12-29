@@ -46,7 +46,9 @@
 //#include "fourSum_18.h"
 //#include "PrintInOrder_1114_test.h"
 //#include "ReverseInteger_7.h"
-#include "PalindromeNumber_9.h"
+//#include "PalindromeNumber_9.h"
+//#include "StaticDynamicCast.h"
+#include "HappyNumber_202.h"
 
 using namespace std;
 
@@ -92,25 +94,10 @@ using namespace std;
 //#define Is_Valid_Sudoku
 //#define Four_Sum_18
 //#define Reverse_Integer_7
-#define Palindrome_Number_9
+//#define Palindrome_Number_9
+//#define StaticDynamicCastTest
+#define Happy_Number_202
 
-#pragma region PrintFunc
-void printVector(vector<int> input)
-{
-	for (auto x : input)
-		std::cout << x << " ";
-	std::cout << endl;
-}
-
-void printLinkList(ListNode* head)
-{
-	while (head != NULL)
-	{
-		std::cout << head->val << " ";
-		head = head->next;
-	}
-	std::cout << endl;
-}
 ListNode* createListNode(int len)
 {
 	ListNode* head = (ListNode*)malloc(sizeof(ListNode));
@@ -125,7 +112,6 @@ ListNode* createListNode(int len)
 	tempHead->next = NULL;
 	return head;
 }
-#pragma endregion
 
 #pragma region ThreadStudy
 /*
@@ -215,12 +201,33 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Happy_Number_202
+		HappyNumber_202 ins;
+		for (int i = 0; i < 50; i++)
+		{
+			Solution::printResult(ins.isHappy(i));
+		}
+#endif // Happy_Number_202
+
+
+
+
+#ifdef StaticDynamicCastTest
+		{
+			StaticDynamicCast::B* pDerive = new StaticDynamicCast::B();
+			StaticDynamicCast::A *pBase = new StaticDynamicCast::B();
+			//StaticDynamicCast::castFunc(pDerive);
+			StaticDynamicCast::castFunc(pBase);
+		}
+#endif // StaticDynamicCastTest
+
 #ifdef Palindrome_Number_9
 		PalindromeNumber_9 ins;
-		cout << ins.isPalindrome(12321) << endl;
-		cout << ins.isPalindrome(123) << endl;
-		cout << ins.isPalindrome(321) << endl;
-		cout << ins.isPalindrome(-12321) << endl;
+		cout << ins.isPalindrome_LCode(12321) << endl;
+		cout << ins.isPalindrome_LCode(123321) << endl;
+		cout << ins.isPalindrome_LCode(123) << endl;
+		cout << ins.isPalindrome_LCode(321) << endl;
+		cout << ins.isPalindrome_LCode(-12321) << endl;
 #endif // Palindrome_Number_9
 
 
