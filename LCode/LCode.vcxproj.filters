@@ -210,6 +210,9 @@
     <ClInclude Include="HappyNumber_202.h">
       <Filter>Header Files\Hash</Filter>
     </ClInclude>
+    <ClInclude Include="CountPrimes_204.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

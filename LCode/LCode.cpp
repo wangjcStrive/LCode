@@ -48,7 +48,8 @@
 //#include "ReverseInteger_7.h"
 //#include "PalindromeNumber_9.h"
 //#include "StaticDynamicCast.h"
-#include "HappyNumber_202.h"
+//#include "HappyNumber_202.h"
+#include "CountPrimes_204.h"
 
 using namespace std;
 
@@ -96,7 +97,8 @@ using namespace std;
 //#define Reverse_Integer_7
 //#define Palindrome_Number_9
 //#define StaticDynamicCastTest
-#define Happy_Number_202
+//#define Happy_Number_202
+#define Count_Primes_204
 
 ListNode* createListNode(int len)
 {
@@ -201,6 +203,14 @@ int main()
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Count_Primes_204
+		CountPrimes_204 ins;
+		Solution::printResult(ins.countPrimesDP(10));
+		Solution::printResult(ins.countPrimesDP(64));
+		Solution::printResult(ins.countPrimesDP(1));
+		Solution::printResult(ins.countPrimesDP(0));
+#endif // Count_Primes_204
+
 #ifdef Happy_Number_202
 		HappyNumber_202 ins;
 		for (int i = 0; i < 50; i++)
