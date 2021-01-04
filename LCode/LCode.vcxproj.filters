@@ -213,6 +213,9 @@
     <ClInclude Include="CountPrimes_204.h">
       <Filter>Header Files\Hash</Filter>
     </ClInclude>
+    <ClInclude Include="ContainsDuplicate_217.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

@@ -49,7 +49,8 @@
 //#include "PalindromeNumber_9.h"
 //#include "StaticDynamicCast.h"
 //#include "HappyNumber_202.h"
-#include "CountPrimes_204.h"
+//#include "CountPrimes_204.h"
+#include "ContainsDuplicate_217.h"
 
 using namespace std;
 
@@ -98,7 +99,8 @@ using namespace std;
 //#define Palindrome_Number_9
 //#define StaticDynamicCastTest
 //#define Happy_Number_202
-#define Count_Primes_204
+//#define Count_Primes_204
+#define Contains_Duplicate_217
 
 ListNode* createListNode(int len)
 {
@@ -199,10 +201,23 @@ int main()
 	vector<int> input5 = { -1,0,1,2,-1,-4 };
 	vector<int> input6 = { 1,0,-1,0,-2,2 };
 	vector<int> input7 = { 3,1,4,2,5,-4,2,4,-5 };
+	vector<int> input8 = { 1,1,1,3,3,4,3,2,4,2 };
 	vector < vector<char>> twoDInput = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
+#ifdef Contains_Duplicate_217
+		ContainsDuplicate_217 ins;
+		int trueResult = 1;
+		int falseResult = 0;
+		Solution::printResult(false, ins.containsDuplicate(input));
+		Solution::printResult(true, ins.containsDuplicate(input1));
+		Solution::printResult(false, ins.containsDuplicate(input2));
+		Solution::printResult(true, ins.containsDuplicate(input3));
+		Solution::printResult(true, ins.containsDuplicate(input4));
+		Solution::printResult(true, ins.containsDuplicate(input8));
+#endif // Contains_Duplicate_217
+
 #ifdef Count_Primes_204
 		CountPrimes_204 ins;
 		Solution::printResult(ins.countPrimesDP(10));

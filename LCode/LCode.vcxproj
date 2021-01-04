@@ -159,6 +159,7 @@
     <ClInclude Include="ClimbingStairs_70.h" />
     <ClInclude Include="CoinChange.h" />
     <ClInclude Include="CoinChange_322.h" />
+    <ClInclude Include="ContainsDuplicate_217.h" />
     <ClInclude Include="CountPrimes_204.h" />
     <ClInclude Include="CourseSchedule.h" />
     <ClInclude Include="DailyTemperatures_739.h" />
