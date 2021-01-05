@@ -204,6 +204,7 @@
     <ClInclude Include="StdMove.h" />
     <ClInclude Include="SubarraySumEqualsK_560.h" />
     <ClInclude Include="TaskScheduler_621.h" />
+    <ClInclude Include="TopKFrequent Elements_347.h" />
     <ClInclude Include="TrappingRainWater_42.h" />
     <ClInclude Include="TwoSum_1.h" />
     <ClInclude Include="UniquePaths_62.h" />
