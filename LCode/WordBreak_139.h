@@ -128,4 +128,19 @@ public:
 		}
 		return DP[length - 1];
 	}
+
+	bool workBreak_review(string s, const vector<string>& wordDict)
+	{
+		sort(wordDict.begin(), wordDict.end());
+		for (size_t i = 0; i < s.length(); i++)
+		{
+			for (auto item : wordDict)
+			{
+				if (item[0] == s[i])
+				{
+					string tempStr = s.substr(i, item.length());
+				}
+			}
+		}
+	}
 };

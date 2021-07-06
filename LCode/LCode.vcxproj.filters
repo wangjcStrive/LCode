@@ -34,11 +34,14 @@
     <Filter Include="Header Files\Sort">
       <UniqueIdentifier>{ae7b3cb8-bd86-43b0-a1ef-9de36e3f7d81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\tempFiles">
-      <UniqueIdentifier>{8db7877d-4c9f-4c0d-93ee-0e6df88f597b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Math">
       <UniqueIdentifier>{62197bd7-5d2c-4952-b1ea-f40db8728d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CPPDemo">
+      <UniqueIdentifier>{550ab5e4-c39f-4c11-ba2e-09cab34e9a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DesignPattern">
+      <UniqueIdentifier>{01c37cfc-bd86-4d1e-92d0-aed3636d1adb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +222,18 @@
     <ClInclude Include="TopKFrequent Elements_347.h">
       <Filter>Header Files\Hash</Filter>
     </ClInclude>
+    <ClInclude Include="constMemberFunc.h">
+      <Filter>Header Files\CPPDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton_Hungry.h">
+      <Filter>Header Files\DesignPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton_Lazy.h">
+      <Filter>Header Files\DesignPattern</Filter>
+    </ClInclude>
+    <ClInclude Include="InheritDemo.h">
+      <Filter>Header Files\CPPDemo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -229,6 +244,9 @@
     </ClCompile>
     <ClCompile Include="ThreeSum.h">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="constMemberFunc.cpp">
+      <Filter>Source Files\CPPDemo</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

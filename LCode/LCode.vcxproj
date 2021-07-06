@@ -159,6 +159,7 @@
     <ClInclude Include="ClimbingStairs_70.h" />
     <ClInclude Include="CoinChange.h" />
     <ClInclude Include="CoinChange_322.h" />
+    <ClInclude Include="constMemberFunc.h" />
     <ClInclude Include="ContainsDuplicate_217.h" />
     <ClInclude Include="CountPrimes_204.h" />
     <ClInclude Include="CourseSchedule.h" />
@@ -173,6 +174,7 @@
     <ClInclude Include="HappyNumber_202.h" />
     <ClInclude Include="HouseRobber.h" />
     <ClInclude Include="ImplementQueueUsingStacks_232.h" />
+    <ClInclude Include="InheritDemo.h" />
     <ClInclude Include="IntersectionofTwoLinkedLists.h" />
     <ClInclude Include="IsValidSudoku_36.h" />
     <ClInclude Include="LargestRectangleInHistogram_84.h" />
@@ -198,6 +200,8 @@
     <ClInclude Include="RotateImage.h" />
     <ClInclude Include="SimplifyPath_71.h" />
     <ClInclude Include="SingleNumber_136.h" />
+    <ClInclude Include="Singleton_Hungry.h" />
+    <ClInclude Include="Singleton_Lazy.h" />
     <ClInclude Include="solutions.h" />
     <ClInclude Include="SortList.h" />
     <ClInclude Include="StaticDynamicCast.h" />
@@ -213,6 +217,7 @@
     <ClInclude Include="WordBreak_139.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="constMemberFunc.cpp" />
     <ClCompile Include="LCode.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

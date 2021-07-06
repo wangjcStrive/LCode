@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "solutions.h"
 
 template <typename T>
@@ -14,22 +14,22 @@ class AllSort {
 public:
 	/*
 	* https://www.cnblogs.com/chengxiao/p/6129630.html
-		heap.ÊÇÒ»ÖÖÑ¡ÔñÅÅĞò£¬×îºÃ£¬×î»µ£¬Æ½¾ù¸´ÔÓ¶È¾ùÎªO(nlogn). ²»ÎÈ¶¨
-		¶ÑÊÇÓĞÒÔÏÂĞÔÖÊµÄÍêÈ«¶ş²æÊ÷£ºÃ¿¸ö½ÚµãµÄÖµ¶¼´óÓÚ»òµÈÓÚÆä×óÓÒº¢×Ó½ÚµãµÄÖµ£¨´ó¶¥¶Ñ
-		Á½¸ö×Ó½Úµã·Ö±ğÊÇ2i+1/2i+2
-		Ë¼Â·
-			1. ½«´ıÅÅĞòĞòÁĞ¹¹Ôì³ÉÒ»¸ö´ó¶¥¶Ñ£¬´ËÊ±Õû¸öĞòÁĞµÄ×î´óÖµ¾ÍÊÇ¶Ñ¶¥µÄ¸ù½Úµã¡£
-			2. ÖØ¸´½«¸ù½ÚµãÓëÄ©Î²ÔªËØ½»»»£¬´ËÊ±Ä©Î²¾ÍÊÇ×î´óÖµ.Ä©Î²ÔªËØ»»µ½¸ù½ÚµãºóĞèÒªÖØĞÂÅÅĞòÂú×ã"¸ù½Úµã±È×Ó½Úµã´ó"£¬µ«ÊÇ´ËÊ±ĞòÁĞ³¤¶È¼õ1
-			3. 
+		heap.æ˜¯ä¸€ç§é€‰æ‹©æ’åºï¼Œæœ€å¥½ï¼Œæœ€åï¼Œå¹³å‡å¤æ‚åº¦å‡ä¸ºO(nlogn). ä¸ç¨³å®š
+		å †æ˜¯æœ‰ä»¥ä¸‹æ€§è´¨çš„å®Œå…¨äºŒå‰æ ‘ï¼šæ¯ä¸ªèŠ‚ç‚¹çš„å€¼éƒ½å¤§äºæˆ–ç­‰äºå…¶å·¦å³å­©å­èŠ‚ç‚¹çš„å€¼ï¼ˆå¤§é¡¶å †
+		ä¸¤ä¸ªå­èŠ‚ç‚¹åˆ†åˆ«æ˜¯2i+1/2i+2
+		æ€è·¯
+			1. å°†å¾…æ’åºåºåˆ—æ„é€ æˆä¸€ä¸ªå¤§é¡¶å †ï¼Œæ­¤æ—¶æ•´ä¸ªåºåˆ—çš„æœ€å¤§å€¼å°±æ˜¯å †é¡¶çš„æ ¹èŠ‚ç‚¹ã€‚
+			2. é‡å¤å°†æ ¹èŠ‚ç‚¹ä¸æœ«å°¾å…ƒç´ äº¤æ¢ï¼Œæ­¤æ—¶æœ«å°¾å°±æ˜¯æœ€å¤§å€¼.æœ«å°¾å…ƒç´ æ¢åˆ°æ ¹èŠ‚ç‚¹åéœ€è¦é‡æ–°æ’åºæ»¡è¶³"æ ¹èŠ‚ç‚¹æ¯”å­èŠ‚ç‚¹å¤§"ï¼Œä½†æ˜¯æ­¤æ—¶åºåˆ—é•¿åº¦å‡1
+			3.
 	*/
 	void heapSort(vector<T>& arr)
 	{
 		int length = arr.size();
-		// Ô­ĞòÁĞ¹¹Ôì³ÉÒ»¸ö´ó¶¥¶Ñ. O(n/2).´ÓµÚÒ»¸öÓĞ×Ó½ÚµãµÄµØ·½¿ªÊ¼£¬i--
-		for (auto i = length / 2 - 1; i>=0; i--)
+		// åŸåºåˆ—æ„é€ æˆä¸€ä¸ªå¤§é¡¶å †. O(n/2).ä»ç¬¬ä¸€ä¸ªæœ‰å­èŠ‚ç‚¹çš„åœ°æ–¹å¼€å§‹ï¼Œi--
+		for (auto i = length / 2 - 1; i >= 0; i--)
 			adjustArrToSatisfyHeap(arr, length, i);
 
-		// ÖØ¸´½»»»¸ù½Úµã¸úÄ©Î²½Úµã. O(logn)?
+		// é‡å¤äº¤æ¢æ ¹èŠ‚ç‚¹è·Ÿæœ«å°¾èŠ‚ç‚¹. O(logn)?
 		for (int tail = length - 1; tail > 0; tail--)
 		{
 			swap(arr[0], arr[tail]);
@@ -38,12 +38,12 @@ public:
 
 	}
 	/*
-		len: ÏŞ¶¨ĞòÁĞ³¤¶È¡£
-		index: Ê¹µÃindexÒÔÏÂµÄËùÓĞ½ÚµãÂú×ã"¸ù½Úµã±È×Ó½Úµã´ó"
+		len: é™å®šåºåˆ—é•¿åº¦ã€‚
+		index: ä½¿å¾—indexä»¥ä¸‹çš„æ‰€æœ‰èŠ‚ç‚¹æ»¡è¶³"æ ¹èŠ‚ç‚¹æ¯”å­èŠ‚ç‚¹å¤§"
 	*/
 	void adjustArrToSatisfyHeap(vector<T>& arr, int len, int index)
 	{
-		int leftSon = 2 * index+1, rightSon = 2 * index + 2;
+		int leftSon = 2 * index + 1, rightSon = 2 * index + 2;
 		int maxIndex = index;
 		if (leftSon < len && arr[leftSon] > arr[index])
 			maxIndex = leftSon;
@@ -52,21 +52,21 @@ public:
 		if (maxIndex != index)
 		{
 			swap(arr[index], arr[maxIndex]);
-			// ½»»»ºó²»ÒªÍü¼Ç,ÖØĞÂµ÷Õû×ö¹ı½»»»µÄ×Ó½Úµã
+			// äº¤æ¢åä¸è¦å¿˜è®°,é‡æ–°è°ƒæ•´åšè¿‡äº¤æ¢çš„å­èŠ‚ç‚¹
 			adjustArrToSatisfyHeap(arr, len, maxIndex);
 		}
 	}
 
 	/*
-		quick sort.  ·ÖÖÎ¡£
-		Æ½¾ùO(nlogn),×î»µO(n^2)¡£Í¨³£¿ìÅÅ¶¼ÊÇÒª±ÈO(nlogn)¿ìµÄ¡£
-		ÊÇ´¦Àí´óÊı¾İ×î¿ìµÄÅÅĞò·½·¨¡£O(nlogn) ¼ÇºÅÖĞÒşº¬µÄ³£ÊıÒò×ÓºÜĞ¡£¬±È¸´ÔÓ¶ÈÎÈ¶¨µÈÓÚ O(nlogn) µÄ¹é²¢ÅÅĞòÒªĞ¡ºÜ¶à¡£ËùÒÔ£¬¶Ô¾ø´ó¶àÊıË³ĞòĞÔ½ÏÈõµÄËæ»úÊıÁĞ¶øÑÔ£¬¿ìËÙÅÅĞò×ÜÊÇÓÅÓÚ¹é²¢ÅÅĞò¡£
+		quick sort.  åˆ†æ²»ã€‚
+		å¹³å‡O(nlogn),æœ€åO(n^2)ã€‚é€šå¸¸å¿«æ’éƒ½æ˜¯è¦æ¯”O(nlogn)å¿«çš„ã€‚
+		æ˜¯å¤„ç†å¤§æ•°æ®æœ€å¿«çš„æ’åºæ–¹æ³•ã€‚O(nlogn) è®°å·ä¸­éšå«çš„å¸¸æ•°å› å­å¾ˆå°ï¼Œæ¯”å¤æ‚åº¦ç¨³å®šç­‰äº O(nlogn) çš„å½’å¹¶æ’åºè¦å°å¾ˆå¤šã€‚æ‰€ä»¥ï¼Œå¯¹ç»å¤§å¤šæ•°é¡ºåºæ€§è¾ƒå¼±çš„éšæœºæ•°åˆ—è€Œè¨€ï¼Œå¿«é€Ÿæ’åºæ€»æ˜¯ä¼˜äºå½’å¹¶æ’åºã€‚
 	*/
 	void quickSort(vector<T>& arr, int low, int high)
 	{
 		if (low < high)
 		{
-			int pivot = partition(arr, low, high); //ÅÅÍêÕâÒ»±éºó£¬´óÓÚpivotµÄÖµ¶¼ÔÚºóÃæ£¬Ğ¡ÓÚpivotµÄÖµ¶¼ÔÚºóÃæÁË
+			int pivot = partition(arr, low, high); //æ’å®Œè¿™ä¸€éåï¼Œå¤§äºpivotçš„å€¼éƒ½åœ¨åé¢ï¼Œå°äºpivotçš„å€¼éƒ½åœ¨åé¢äº†
 			quickSort(arr, low, pivot - 1);
 			quickSort(arr, pivot + 1, high);
 		}
@@ -77,11 +77,11 @@ public:
 		int pivot = arr[low];
 		while (low < high)
 		{
-			// ÓÉÓÒÏò×ó£¬ÕÒµ½Ğ¡ÓÚpivotµÄÔªËØ£¬È»ºó½»»»µ½lowµÄÎ»ÖÃ
+			// ç”±å³å‘å·¦ï¼Œæ‰¾åˆ°å°äºpivotçš„å…ƒç´ ï¼Œç„¶åäº¤æ¢åˆ°lowçš„ä½ç½®
 			while (low < high && arr[high] >= pivot)
 				high--;
 			arr[low] = arr[high];
-			// ÓÉ×óÏòÓÒ£¬ÕÒµ½´óÓÚpivotµÄÔªËØ£¬½»»»µ½highµÄÎ»ÖÃ
+			// ç”±å·¦å‘å³ï¼Œæ‰¾åˆ°å¤§äºpivotçš„å…ƒç´ ï¼Œäº¤æ¢åˆ°highçš„ä½ç½®
 			while (low < high && arr[low] <= pivot)
 				low++;
 			arr[high] = arr[low];
@@ -99,9 +99,9 @@ public:
 		size_t length = arr.size();
 		for (size_t gap = length / 2; gap != 0; gap /= 2)
 		{
-			for (size_t i = 0; i < gap; i++)	//·Ö×é
+			for (size_t i = 0; i < gap; i++)	//åˆ†ç»„
 			{
-				for (size_t j = i; j < length; j += gap)	//¶ÔÃ¿×é½øĞĞ²åÈëÅÅĞò
+				for (size_t j = i; j < length; j += gap)	//å¯¹æ¯ç»„è¿›è¡Œæ’å…¥æ’åº
 				{
 					for (size_t k = i; k < j; k += gap)
 					{
@@ -114,15 +114,15 @@ public:
 	}
 
 	/*
-		¹é²¢ÅÅĞò
-		ÓÉÉÏµ½ÏÂ·Ö¸îÖ±µ½Ö»ÓĞÁ½¸öÔªËØ -> °ÑÕâÁ½¸öÔªËØÅÅĞò -> ÓÉÏÂµ½ÉÏ¿ªÊ¼merge
-		¸´ÔÓ¶È
-			Ê±¼ä£ºO(nlogn):Ê¹ÓÃÁË¶ş·Ö·¨°ÑÊı×é·Ö¸î
-			¿Õ¼ä£ºO(n)
-		ÎÈ¶¨ÅÅĞò
-		È±µã£º
-			ĞèÒªÕ¼ÓÃ¶îÍâµÄ¿Õ¼ä
-			µİ¹é·½·¨£¬Èç¹ûÊäÈë±È½Ï³¤£¬µİ¹éµÄ²ãÊıÌ«¶à£¬Ôì³ÉÕ»Òç³ö
+		å½’å¹¶æ’åº
+		ç”±ä¸Šåˆ°ä¸‹åˆ†å‰²ç›´åˆ°åªæœ‰ä¸¤ä¸ªå…ƒç´  -> æŠŠè¿™ä¸¤ä¸ªå…ƒç´ æ’åº -> ç”±ä¸‹åˆ°ä¸Šå¼€å§‹merge
+		å¤æ‚åº¦
+			æ—¶é—´ï¼šO(nlogn):ä½¿ç”¨äº†äºŒåˆ†æ³•æŠŠæ•°ç»„åˆ†å‰²
+			ç©ºé—´ï¼šO(n)
+		ç¨³å®šæ’åº
+		ç¼ºç‚¹ï¼š
+			éœ€è¦å ç”¨é¢å¤–çš„ç©ºé—´
+			é€’å½’æ–¹æ³•ï¼Œå¦‚æœè¾“å…¥æ¯”è¾ƒé•¿ï¼Œé€’å½’çš„å±‚æ•°å¤ªå¤šï¼Œé€ æˆæ ˆæº¢å‡º
 	*/
 	// todo. no recursive solution
 	void mergeSort(vector<T>& arr)
@@ -142,20 +142,20 @@ private:
 				swap(arr[start], arr[end]);
 			return;
 		}
-		//·ÖÁ½²¿·Ö£¬Ö±µ½·Ö¸îµÄÖ»ÓĞÁ½¸öÔªËØ
+		//åˆ†ä¸¤éƒ¨åˆ†ï¼Œç›´åˆ°åˆ†å‰²çš„åªæœ‰ä¸¤ä¸ªå…ƒç´ 
 		//auto mid = end/2;
-		auto mid = start + (end-start) / 2;		//×¢ÒâmidµÄÎ»ÖÃ
+		auto mid = start + (end - start) / 2;		//æ³¨æ„midçš„ä½ç½®
 		mergeSortRecursive(arr, start, mid);
 		mergeSortRecursive(arr, mid + 1, end);
 
-		//ÏÂÃæµÄÒÑ¾­ÅÅºÃĞò£¬ÏÖÔÚmergerµ½Ò»Æğ
+		//ä¸‹é¢çš„å·²ç»æ’å¥½åºï¼Œç°åœ¨mergeråˆ°ä¸€èµ·
 		int m = start, n = mid + 1;
 		vector<T> tempVec;
 		for (int i = start; i <= end; i++)
 		{
 			if (m > mid)
 				tempVec.push_back(arr[n++]);
-			else if(n>end)
+			else if (n > end)
 				tempVec.push_back(arr[m++]);
 			else
 				tempVec.push_back(arr[m] < arr[n] ? arr[m++] : arr[n++]);
@@ -166,7 +166,7 @@ private:
 
 public:
 	/*
-		Ã°Åİ. 5 4 3 2 1 -> 4 5 3 2 1 -> ... -> 4 3 2 1 5
+		å†’æ³¡. 5 4 3 2 1 -> 4 5 3 2 1 -> ... -> 4 3 2 1 5
 		O(N^2)
 		stable
 	*/
@@ -174,7 +174,7 @@ public:
 	{
 		for (int i = 0; i < arr.size(); i++)
 		{
-			for (int j = i+1; j < arr.size(); j++)
+			for (int j = i + 1; j < arr.size(); j++)
 			{
 				if (arr[i] > arr[j])
 					swap(arr[i], arr[j]);
@@ -191,11 +191,11 @@ public:
 	void bubbleSort_new(vector<T>& arr)
 	{
 		int length = arr.size();
-		// ³¤¶ÈÎªn£¬ĞèÒªn-1ÌË£¬Ã¿ÌË°Ñ×î´óµÄÑ¹µ½×îºó
-		// iÎªµÚ¼¸ÌË
+		// é•¿åº¦ä¸ºnï¼Œéœ€è¦n-1è¶Ÿï¼Œæ¯è¶ŸæŠŠæœ€å¤§çš„å‹åˆ°æœ€å
+		// iä¸ºç¬¬å‡ è¶Ÿ
 		for (size_t i = 0; i < length; i++)
 		{
-			for (size_t j = i; j < length-i-1; j++)
+			for (size_t j = i; j < length - i - 1; j++)
 			{
 				if (arr[j] > arr[j + 1])
 					swap(arr[j], arr[j + 1]);
@@ -205,20 +205,20 @@ public:
 
 
 	/*
-		Ñ¡Ôñ
+		é€‰æ‹©
 		unstable
 		O(N^2)
-		´ÓÊ£µÄÀïÃæÌô³ö×îĞ¡µÄ.
+		ä»å‰©çš„é‡Œé¢æŒ‘å‡ºæœ€å°çš„.
 	*/
 	void selectionSort(vector<T>& arr)
 	{
 		int minVal, minIndex;
-		
+
 		for (int i = 0; i < arr.size(); i++)
 		{
 			minVal = arr[i];
 			minIndex = i;
-			for(int j=i; j<arr.size(); j++)
+			for (int j = i; j < arr.size(); j++)
 			{
 				if (arr[j] < minVal)
 				{
@@ -232,13 +232,13 @@ public:
 
 
 	/*
-		²åÈë
+		æ’å…¥
 		O(N^2)
 		stabe
-		Ğ¡¹æÄ£Êı¾İ»ò»ù±¾ÓĞĞòÊ±±È½Ï¸ßĞ§
+		å°è§„æ¨¡æ•°æ®æˆ–åŸºæœ¬æœ‰åºæ—¶æ¯”è¾ƒé«˜æ•ˆ
 	*/
-	//todo. ÏÂÃæµÄĞ´·¨ºÃÏñ²»ÊÇ×îÓÅµÄ...ÓĞ3²ãforÑ­»·
-	// ÒòÎªÊÇ´Ó0¿ªÊ¼µ½index£¬¶øÏÂÃæÊÇ´Óindex·´×ÅÀ´µÄ
+	//todo. ä¸‹é¢çš„å†™æ³•å¥½åƒä¸æ˜¯æœ€ä¼˜çš„...æœ‰3å±‚forå¾ªç¯
+	// å› ä¸ºæ˜¯ä»0å¼€å§‹åˆ°indexï¼Œè€Œä¸‹é¢æ˜¯ä»indexåç€æ¥çš„
 	void insertSort(vector<T>& arr)
 	{
 		for (int i = 1; i < arr.size(); i++)
@@ -258,7 +258,7 @@ public:
 		}
 	}
 
-	// ´Óindex=1¿ªÊ¼£¬°ÑindexÎ»ÖÃµÄÔªËØ²åÈëµ½Ç°ÃæÈ¥£¬´ÓindexÎ»ÖÃ¿ªÊ¼Ïò×óÒÆ¶¯ÒÔ²åÈë
+	// ä»index=1å¼€å§‹ï¼ŒæŠŠindexä½ç½®çš„å…ƒç´ æ’å…¥åˆ°å‰é¢å»ï¼Œä»indexä½ç½®å¼€å§‹å‘å·¦ç§»åŠ¨ä»¥æ’å…¥
 	void insertSortNew(vector<T>& arr)
 	{
 		int length = arr.size();
