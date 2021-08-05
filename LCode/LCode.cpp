@@ -7,112 +7,121 @@
 #include <chrono>
 #include <thread>
 #include "solutions.h"
-/*
-#include "PrintInOrder_1114.h"
-#include "LetterCombinationsOfaPhoneNumber.h"
-#include "PartitionList.h"
-#include "LIS.h"
-#include "ThreeSum.h"
-#include "LinkedListCycleII.h"
-#include "RotateImage.h"
-#include "SortList.h"
-#include "AllSortSolutions.h"
-#include "IntersectionofTwoLinkedLists.h"
-#include "ReverseLinkedList.h"
-#include "DailyTemperatures_739.h"
-#include "DecodeString_394.h"
-#include "ImplementQueueUsingStacks_232.h"
-#include "TrappingRainWater_42.h"
-#include "SimplifyPath_71.h"
-#include "LargestRectangleInHistogram_84.h"
-#include "ValidParentheses_20.h"
-#include "CoinChange_322.h"
-#include "LongestIncreasingSubsequence_300.h"
-#include "LongestPalindromicSubstring_5.h"
-#include "MaximumSubarray_53.h"
-#include "MinimumPathSum_64.h"
-#include "ClimbingStairs_70.h"
-#include "BestTimeToBuyAndSellStock_121.h"
-#include "PrintFooBarAlternately_1115.h"
-#include "WordBreak_139.h"
-#include "PalindromicSubstrings_647.h"
-#include "TaskScheduler_621.h"
-#include "TwoSum_1.h"
-#include "LongestSubstringWithoutRepeatingCharacters_3.h"
-#include "SingleNumber_136.h"
-#include "AllSortTemplate.h"
-#include "PrintZeroEvenOdd_1116.h"
+//#include "PrintInOrder_1114.h"
+//#include "LetterCombinationsOfaPhoneNumber.h"
+//#include "PartitionList.h"
+//#include "LIS.h"
+//#include "ThreeSum.h"
+//#include "LinkedListCycleII.h"
+//#include "RotateImage.h"
+//#include "SortList.h"
+//#include "AllSortSolutions.h"
+//#include "IntersectionofTwoLinkedLists.h"
+//#include "ReverseLinkedList.h"
+//#include "DailyTemperatures_739.h"
+//#include "DecodeString_394.h"
+//#include "ImplementQueueUsingStacks_232.h"
+//#include "TrappingRainWater_42.h"
+//#include "SimplifyPath_71.h"
+//#include "LargestRectangleInHistogram_84.h"
+//#include "ValidParentheses_20.h"
+//#include "CoinChange_322.h"
+//#include "LongestIncreasingSubsequence_300.h"
+//#include "LongestPalindromicSubstring_5.h"
+//#include "MaximumSubarray_53.h"
+//#include "MinimumPathSum_64.h"
+//#include "ClimbingStairs_70.h"
+//#include "BestTimeToBuyAndSellStock_121.h"
+////#include "PrintFooBarAlternately_1115.h"
+//#include "WordBreak_139.h"
+//#include "PalindromicSubstrings_647.h"
+//#include "TaskScheduler_621.h"
+//#include "TwoSum_1.h"
+//#include "LongestSubstringWithoutRepeatingCharacters_3.h"
+//#include "SingleNumber_136.h"
+//#include "AllSortTemplate.h"
 #include "SubarraySumEqualsK_560.h"
-#include "IsValidSudoku_36.h"
-#include "fourSum_18.h"
-#include "PrintInOrder_1114_test.h"
-#include "ReverseInteger_7.h"
-#include "PalindromeNumber_9.h"
-#include "StaticDynamicCast.h"
-#include "HappyNumber_202.h"
-#include "CountPrimes_204.h"
-#include "ContainsDuplicate_217.h"
-#include "TopKFrequent Elements_347.h"
-#include "constMemberFunc.h"
-*/
-
-#include "InheritDemo.h"
+//#include "IsValidSudoku_36.h"
+//#include "fourSum_18.h"
+//#include "PrintInOrder_1114.h"
+//#include "PrintFooBarAlternately_1115.h"
+//#include "PrintZeroEvenOdd_1116.h"
+#include "ProducerConsumer.h"
 
 using namespace std;
 
-/*
-#define LETTER_COMBINATION_PHONE_NUMBER_17;
-#define PARTITION_LIST_86
-#define DYNAMIC_PROGRAM
-#define LIS_300
-#define ThreeSum_15
-#define LinkedListCycleII_142
-#define Rotate_Image_48
-#define SortList_148
-#define Sort_All
-#define Intersection_of_Two_LinkedLists_160
-#define Reverse_LinkList_206
-#define Shell_Sort
-#define Daily_Temperatures_739
-#define Decode_String_394
-#define ImplementQueueUsingStack_232
-#define TrappingRainWater_42
-#define SimplifyPath_71
-#define LargestRectangleInHistogram_84
-#define ValidParentheses_20
-#define CoinChange_322
-#define LongestPalindromicSubstring
-#define Print_In_Order_1114
-#define Print_In_Order_1114_TEST
-#define Maximum_Subarray_53
-#define Minimum_Path_Sum_64
-#define Climbing_Stairs_70
-#define Best_Time_To_Buy_And_Sell_Stock_121
-#define Print_FooBar_Alternately_1115
-#define Thread_Study
-#define Word_Break_139
-#define Palindromic_Substrings_647
-#define Task_Scheduler_621
-#define Two_Sum_1
-#define Longest_Substring_Without_Repeating_Characters_3
-#define Single_Number_136
-#define ALL_SORT_TEMPLATE
-#define Zero_Even_Odd_1116
-#define Subarray_Sum_Equal_sK_560
-#define Is_Valid_Sudoku
-#define Four_Sum_18
-#define Reverse_Integer_7
-#define Palindrome_Number_9
-#define StaticDynamicCastTest
-#define Happy_Number_202
-#define Count_Primes_204
-#define Contains_Duplicate_217
-#define Top_K_Frequent_Elements_347
-#define CPP_DEMO
-*/
-#define Inherit_Test
+//#define LETTER_COMBINATION_PHONE_NUMBER_17;
+//#define PARTITION_LIST_86
+//#define DYNAMIC_PROGRAM
+//#define LIS_300
+//#define ThreeSum_15
+//#define LinkedListCycleII_142
+//#define Rotate_Image_48
+//#define SortList_148
+//#define Sort_All
+//#define Intersection_of_Two_LinkedLists_160
+//#define Reverse_LinkList_206
+//#define Shell_Sort
+//#define Daily_Temperatures_739
+//#define Decode_String_394
+//#define ImplementQueueUsingStack_232
+//#define TrappingRainWater_42
+//#define SimplifyPath_71
+//#define LargestRectangleInHistogram_84
+//#define ValidParentheses_20
+//#define CoinChange_322
+//#define LongestPalindromicSubstring
+//#define Print_In_Order_1114
+//#define Print_In_Order_1114_TEST
+//#define Maximum_Subarray_53
+//#define Minimum_Path_Sum_64
+//#define Climbing_Stairs_70
+//#define Best_Time_To_Buy_And_Sell_Stock_121
+//#define Print_FooBar_Alternately_1115
+#define Thread_Producer_Consumer
+//#define CPP_DEMO
+//#define Word_Break_139
+//#define Palindromic_Substrings_647
+//#define Task_Scheduler_621
+//#define Two_Sum_1
+//#define Longest_Substring_Without_Repeating_Characters_3
+//#define Single_Number_136
+//#define ALL_SORT_TEMPLATE
+//#define Zero_Even_Odd_1116
+//#define Subarray_Sum_Equal_sK_560
+//#define Is_Valid_Sudoku
+//#define Four_Sum_18
 
+#pragma region PrintFunc
+void printVector(vector<int> input)
+{
+	for (auto x : input)
+		std::cout << x << " ";
+	std::cout << endl;
+}
 
+void printLogWithTime(string log)
+{
+	char timeStr[30];
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+
+	sprintf_s(timeStr, 30, "%d/%02d/%02d %02d:%02d:%02d.%d: ", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
+	//sprintf(timeStr, "%d/%02d/%02d %02d:%02d:%02d.%d: ", st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
+	std::string time(timeStr);
+
+	std::cout << time << log << std::endl;
+}
+
+void printLinkList(ListNode* head)
+{
+	while (head != NULL)
+	{
+		std::cout << head->val << " ";
+		head = head->next;
+	}
+	std::cout << endl;
+}
 ListNode* createListNode(int len)
 {
 	ListNode* head = (ListNode*)malloc(sizeof(ListNode));
@@ -127,41 +136,26 @@ ListNode* createListNode(int len)
 	tempHead->next = NULL;
 	return head;
 }
+#pragma endregion
 
 #pragma region ThreadStudy
 /*
-	void threadRun(PrintInOrder_1114_Test& ins, int id)
+void threadRun(PrintInOrder_1114_Test& ins, int id)
+{
+	cout << "thread: " << id << endl;
+	if (id == 1)
 	{
-		cout << "thread: " << id << endl;
-		if (id == 1)
-		{
-			ins.first();
-		}
-		else if (id == 2)
-		{
-			ins.second();
-		}
-		else if (id == 3)
-		{
-			ins.third();
-		}
+		ins.first();
 	}
-	void threadRun(ThreadDemo& ins, int id)
+	else if (id == 2)
 	{
-		cout << "Thread " << id << endl;
-		if (id == 1)
-		{
-			ins.first();
-		}
-		else if (id == 2)
-		{
-			ins.second();
-		}
-		else if (id == 3)
-		{
-			ins.third();
-		}
+		ins.second();
 	}
+	else if (id == 3)
+	{
+		ins.third();
+	}
+}
 
 void PrintFooBarAlternately_runThread(PrintFooBarAlternately_1115& ins, int threadID)
 {
@@ -201,110 +195,31 @@ void append_number(int x)
 //}
 // LCode 1116 end
 
+#ifdef Thread_Producer_Consumer
+// can't move below code to main. compile error.
+int ProducerConsumer::m_productIndex = 0;
+int ProducerConsumer::m_consumeIndex = 0;
+std::queue<int> ProducerConsumer::m_productionBuff;
+std::mutex ProducerConsumer::m_mtx;
+std::condition_variable ProducerConsumer::m_cvProducer, ProducerConsumer::m_cvConsumer;
+#endif // Thread_Producer_Consumer
+
+
 
 int main()
 {
 	vector<int> input = { 5,4,6,3,7,2,8,1 };
 	vector<int> input1 = { 1, 0, -1, 0, -2, 2 };
-	vector<int> input2 = {1,-1,0};
-	vector<int> input3 = {0,0,0,0};
+	vector<int> input2 = { 1,-1,0 };
+	vector<int> input3 = { 0,0,0,0 };
 	vector<int> input4 = { -2,-1,-1,1,1,2,2 };
 	vector<int> input5 = { -1,0,1,2,-1,-4 };
 	vector<int> input6 = { 1,0,-1,0,-2,2 };
 	vector<int> input7 = { 3,1,4,2,5,-4,2,4,-5 };
-	vector<int> input8 = { 1,1,1,3,3,4,3,2,4,2 };
-	vector<int> input9 = { 1,1,1,2,2,3 };
-	vector<int> inputA = {1};
-	vector<int> inputB = {1,2,1,2,3,1,1,1,3,3};
-	vector < vector<char>> twoDInput = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
+	vector < vector<char>> twoDInput = { {'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'} };
 	auto startTime = std::chrono::steady_clock::now();
 	try
 	{
-#ifdef Inherit_Test
-		BaseInheritTest base;
-		DeriveInheritTest derive;
-		//base.func1();
-		//derive.func1();
-		//derive.func2();
-
-		BaseInheritTest* ptr;
-		ptr = new DeriveInheritTest();
-		ptr->func1();
-		ptr->func2();
-#endif // Inherit_Test
-
-
-
-
-#ifdef Top_K_Frequent_Elements_347
-		TopKFrequentElements_347 ins;
-		Solution::print_InVec_OutVec(input9, ins.topKFrequent(input9, 3));
-		Solution::print_InVec_OutVec(input9, ins.topKFrequent(input9, 2));
-		Solution::print_InVec_OutVec(input9, ins.topKFrequent(input9, 1));
-		Solution::print_InVec_OutVec(inputA, ins.topKFrequent(inputA, 1));
-		Solution::print_InVec_OutVec(inputB, ins.topKFrequent(inputB, 1));
-		Solution::print_InVec_OutVec(inputB, ins.topKFrequent(inputB, 3));
-#endif // Top_K_Frequent_Elements_347
-
-#ifdef Contains_Duplicate_217
-		ContainsDuplicate_217 ins;
-		int trueResult = 1;
-		int falseResult = 0;
-		Solution::printResult(false, ins.containsDuplicate(input));
-		Solution::printResult(true, ins.containsDuplicate(input1));
-		Solution::printResult(false, ins.containsDuplicate(input2));
-		Solution::printResult(true, ins.containsDuplicate(input3));
-		Solution::printResult(true, ins.containsDuplicate(input4));
-		Solution::printResult(true, ins.containsDuplicate(input8));
-#endif // Contains_Duplicate_217
-
-#ifdef Count_Primes_204
-		CountPrimes_204 ins;
-		Solution::printResult(ins.countPrimesDP(10));
-		Solution::printResult(ins.countPrimesDP(64));
-		Solution::printResult(ins.countPrimesDP(1));
-		Solution::printResult(ins.countPrimesDP(0));
-#endif // Count_Primes_204
-
-#ifdef Happy_Number_202
-		HappyNumber_202 ins;
-		for (int i = 0; i < 50; i++)
-		{
-			Solution::printResult(ins.isHappy(i));
-		}
-#endif // Happy_Number_202
-
-
-
-
-#ifdef StaticDynamicCastTest
-		{
-			StaticDynamicCast::B* pDerive = new StaticDynamicCast::B();
-			StaticDynamicCast::A *pBase = new StaticDynamicCast::B();
-			//StaticDynamicCast::castFunc(pDerive);
-			StaticDynamicCast::castFunc(pBase);
-		}
-#endif // StaticDynamicCastTest
-
-#ifdef Palindrome_Number_9
-		PalindromeNumber_9 ins;
-		cout << ins.isPalindrome_LCode(12321) << endl;
-		cout << ins.isPalindrome_LCode(123321) << endl;
-		cout << ins.isPalindrome_LCode(123) << endl;
-		cout << ins.isPalindrome_LCode(321) << endl;
-		cout << ins.isPalindrome_LCode(-12321) << endl;
-#endif // Palindrome_Number_9
-
-
-
-#ifdef Reverse_Integer_7
-		ReverseInteger_7 ins;
-		cout << ins.reverse_LCode(-123) << endl;
-		cout << ins.reverse_LCode(111) << endl;
-		cout << ins.reverse_LCode(-123) << endl;
-		cout << ins.reverse_LCode(0) << endl;
-#endif // Reverse_Integer_7
-
 #ifdef  Four_Sum_18
 		FourSum_18 ins;
 		vector<vector<int>> result;
@@ -399,8 +314,8 @@ int main()
 #ifdef Two_Sum_1
 		TwoSum_1 ins;
 		vector<int> input1 = { 2,5,5,11 };
-		vector<int> input2 = {3,3};
-		vector<int> input3 = {3,1,2};
+		vector<int> input2 = { 3,3 };
+		vector<int> input3 = { 3,1,2 };
 		auto result = ins.twoSum(input1, 10);
 		for (auto x : result)
 		{
@@ -466,25 +381,29 @@ int main()
 
 
 #ifdef CPP_DEMO
-		constMemberFunc ins;
-		ins.constFunc();
-		ins.printMember();
-		ins.funcToBeCallByConstMember();
-		ins.printMember();
 #endif // CPP_DEMO
 
 
-#ifdef Thread_Study
-		vector<std::thread> threads;
-		for (int i = 0; i < 10; i++)
-		{
-			threads.push_back(std::thread(append_number, i));
-		}
-		for (auto& th : threads)
-		{
+#ifdef Thread_Producer_Consumer
+		const int threadQuantity = 1;
+		thread producer[threadQuantity], consumer[threadQuantity];
 
+		for (size_t i = 0; i < 8; i++)
+		{
+			ProducerConsumer::m_productionBuff.push(i);
 		}
-#endif // Thread_Study
+
+		for (size_t i = 0; i < threadQuantity; i++)
+		{
+			producer[i] = thread(ProducerConsumer::producer, i, 1000);
+			consumer[i] = thread(ProducerConsumer::consumer, 500);
+		}
+		for (size_t i = 0; i < threadQuantity; i++)
+		{
+			producer[i].join();
+			consumer[i].join();
+		}
+#endif // Thread_Producer_Consumer
 
 
 
@@ -530,8 +449,8 @@ int main()
 #ifdef Maximum_Subarray_53
 		vector<int> input1 = { -2,1,-3,4,-1,2,1,-5,4 };
 		vector<int> input2 = { 1 };
-		vector<int> input3 = { -1, -2, -3, -4};
-		vector<int> input4 = { 1,2,3,4};
+		vector<int> input3 = { -1, -2, -3, -4 };
+		vector<int> input4 = { 1,2,3,4 };
 		MaximumSubarray_53 ins;
 		cout << ins.maxSubArray(input1) << endl;
 		cout << ins.maxSubArray(input2) << endl;
@@ -829,7 +748,7 @@ int main()
 		//cout << ins.lengthOfLIS(input1) << endl;		
 		//cout << ins.lengthOfLIS(input2) << endl;
 
-		cout << ins.lengthOfLIS_vectorMinMax(input) << endl;		
+		cout << ins.lengthOfLIS_vectorMinMax(input) << endl;
 		cout << ins.lengthOfLIS_vectorMinMax(input1) << endl;
 		cout << ins.lengthOfLIS_vectorMinMax(input2) << endl;
 

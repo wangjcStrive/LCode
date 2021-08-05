@@ -234,6 +234,9 @@
     <ClInclude Include="InheritDemo.h">
       <Filter>Header Files\CPPDemo</Filter>
     </ClInclude>
+    <ClInclude Include="ProducerConsumer.h">
+      <Filter>Header Files\Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
